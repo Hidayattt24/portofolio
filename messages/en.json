@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "achievements": "Achievements",
+    "certifications": "Certifications",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "copyright": "COPYRIGHT © 2026",
+    "rights": "Hidayat Nur Hakim. All rights reserved."
+  },
+  "bio": {
+    "name": "Hidayat Nur Hakim",
+    "subtitle": "Full-Stack Developer | AI & LLM Enthusiast",
+    "status": "Available to Works Or Collaboration",
+    "tagline1": "Your Digital Vision,",
+    "tagline2": "Perfectly Realized.",
+    "description": "From concept to launch, I create websites with stunning visuals, seamless user experiences, and expert development in Webflow and Framer.",
+    "collaboration": "Collaboration",
+    "resume": "Resume"
+  },
+  "social": {
+    "title": "Connect With Me",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "x": "X",
+    "instagram": "Instagram"
+  },
+  "experience": {
+    "title": "Experience"
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "achievements": {
+    "title": "Achievements",
+    "comingSoon": "Coming soon..."
+  },
+  "certifications": {
+    "title": "Certifications",
+    "comingSoon": "Coming soon..."
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "comingSoon": "Coming soon..."
+  },
+  "contact": {
+    "title": "Contact",
+    "comingSoon": "Coming soon..."
+  }
+}

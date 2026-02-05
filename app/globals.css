@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
 :root {
+  /* Background Colors */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #25343F;
+  
+  /* Card Colors */
+  --card-bg: #DCDCDC;
+  --card-border: #000000;  /* Changed to black for classic look */
+  --card-shadow: #5A7863;
+  
+  /* Button Colors */
+  --button-primary-bg: #000000;  /* Changed to black */
+  --button-primary-text: #ffffff;
+  --button-secondary-bg: #ffffff;
+  --button-secondary-text: #25343F;
+  --button-secondary-border: #000000;  /* Changed to black */
+  
+  /* Text Colors */
+  --text-primary: #25343F;
+  --text-secondary: rgba(37, 52, 63, 0.7);
+  --text-muted: rgba(37, 52, 63, 0.5);
+  
+  /* Accent Colors */
+  --accent-green: #5A7863;
+  --accent-light: rgba(0, 0, 0, 0.05);  /* Changed to black based */
+  
+  /* Status Colors */
+  --status-available: #5A7863;
+  
+  /* Border & Shadow */
+  --border-width: 3px;
+  --shadow-sm: 4px 4px 0px var(--card-shadow);
+  --shadow-md: 8px 8px 0px var(--card-shadow);
+  --shadow-lg: 12px 12px 0px var(--card-shadow);
+  
+  /* Border Radius */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-card-shadow: var(--card-shadow);
+  --font-serif: var(--font-dm-serif);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-serif), serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--card-shadow);
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--card-border) #f1f1f1;
 }

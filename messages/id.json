@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "about": "Tentang",
+    "experience": "Pengalaman",
+    "projects": "Proyek",
+    "achievements": "Pencapaian",
+    "certifications": "Sertifikasi",
+    "testimonials": "Testimoni",
+    "contact": "Kontak",
+    "copyright": "HAK CIPTA © 2026",
+    "rights": "Hidayat Nur Hakim. Semua hak dilindungi."
+  },
+  "bio": {
+    "name": "Hidayat Nur Hakim",
+    "subtitle": "Full-Stack Developer | Penggemar AI & LLM",
+    "status": "Tersedia untuk Bekerja atau Kolaborasi",
+    "tagline1": "Visi Digital Anda,",
+    "tagline2": "Terwujud Sempurna.",
+    "description": "Dari konsep hingga peluncuran, saya membuat website dengan visual yang menakjubkan, pengalaman pengguna yang mulus, dan pengembangan ahli di Webflow dan Framer.",
+    "collaboration": "Kolaborasi",
+    "resume": "Resume"
+  },
+  "social": {
+    "title": "Terhubung Dengan Saya",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "x": "X",
+    "instagram": "Instagram"
+  },
+  "experience": {
+    "title": "Pengalaman"
+  },
+  "projects": {
+    "title": "Proyek"
+  },
+  "achievements": {
+    "title": "Pencapaian",
+    "comingSoon": "Segera hadir..."
+  },
+  "certifications": {
+    "title": "Sertifikasi",
+    "comingSoon": "Segera hadir..."
+  },
+  "testimonials": {
+    "title": "Testimoni",
+    "comingSoon": "Segera hadir..."
+  },
+  "contact": {
+    "title": "Kontak",
+    "comingSoon": "Segera hadir..."
+  }
+}

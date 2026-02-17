@@ -1,5 +1,6 @@
 {
   "nav": {
+    "home": "Beranda",
     "about": "Tentang",
     "experience": "Pengalaman",
     "projects": "Proyek",
@@ -26,6 +27,107 @@
     "github": "GitHub",
     "x": "X",
     "instagram": "Instagram"
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "intro": "Halo! Saya adalah Full-Stack Developer yang bersemangat dengan fokus kuat dalam menciptakan solusi web yang inovatif dan efisien.",
+    "description": "Dengan keahlian dalam teknologi web modern dan minat mendalam pada AI dan Large Language Models, saya membangun aplikasi yang menggabungkan teknologi terkini dengan pengalaman pengguna yang luar biasa.",
+    "passion": "Saya terus belajar dan menjelajahi teknologi baru untuk memberikan solusi terbaik bagi klien dan proyek saya."
+  },
+  "techStack": {
+    "title": "Tech Stack",
+    "frontend": {
+      "title": "Frontend",
+      "tech1": "React / Next.js",
+      "tech2": "TypeScript",
+      "tech3": "Tailwind CSS",
+      "tech4": "Framer Motion"
+    },
+    "backend": {
+      "title": "Backend",
+      "tech1": "Node.js",
+      "tech2": "Express",
+      "tech3": "Python",
+      "tech4": "FastAPI"
+    },
+    "database": {
+      "title": "Database",
+      "tech1": "PostgreSQL",
+      "tech2": "MongoDB",
+      "tech3": "Redis",
+      "tech4": "Prisma"
+    },
+    "mobile": {
+      "title": "Mobile",
+      "tech1": "React Native",
+      "tech2": "Flutter",
+      "tech3": "Expo"
+    },
+    "design": {
+      "title": "Alat Desain",
+      "tech1": "Figma",
+      "tech2": "Webflow",
+      "tech3": "Framer"
+    },
+    "others": {
+      "title": "Lainnya",
+      "tech1": "Git & GitHub",
+      "tech2": "Docker",
+      "tech3": "AI & LLM APIs"
+    }
+  },
+  "softSkills": {
+    "title": "Soft Skills",
+    "skill1": {
+      "name": "Kerja Tim",
+      "icon": "Users",
+      "description": "Berkolaborasi secara efektif dengan tim lintas fungsi untuk mencapai tujuan bersama"
+    },
+    "skill2": {
+      "name": "Komunikasi",
+      "icon": "MessageSquare",
+      "description": "Menyampaikan ide dan konsep teknis dengan jelas kepada audiens teknis maupun non-teknis"
+    },
+    "skill3": {
+      "name": "Pemecahan Masalah",
+      "icon": "Lightbulb",
+      "description": "Menganalisis masalah kompleks dan mengembangkan solusi inovatif"
+    },
+    "skill4": {
+      "name": "Adaptabilitas",
+      "icon": "TrendingUp",
+      "description": "Cepat belajar dan beradaptasi dengan teknologi baru dan perubahan kebutuhan"
+    },
+    "skill5": {
+      "name": "Manajemen Waktu",
+      "icon": "Clock",
+      "description": "Mengelola berbagai proyek secara efisien dan memenuhi tenggat waktu"
+    },
+    "skill6": {
+      "name": "Berpikir Kritis",
+      "icon": "Puzzle",
+      "description": "Membuat keputusan yang tepat melalui analisis dan evaluasi logis"
+    }
+  },
+  "languages": {
+    "title": "Bahasa",
+    "proficiency": "Kemahiran",
+    "note": "Terbuka untuk mempelajari bahasa baru dan beradaptasi dengan lingkungan multikultural",
+    "lang1": {
+      "name": "Bahasa Indonesia",
+      "level": "Native",
+      "proficiency": "100"
+    },
+    "lang2": {
+      "name": "Bahasa Inggris",
+      "level": "Profesional",
+      "proficiency": "85"
+    },
+    "lang3": {
+      "name": "Bahasa Jepang",
+      "level": "Dasar",
+      "proficiency": "40"
+    }
   },
   "experience": {
     "title": "Pengalaman"

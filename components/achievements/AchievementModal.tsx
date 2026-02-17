@@ -2,39 +2,39 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight, ExternalLink, Github } from 'lucide-react';
+import { X, Trophy, Calendar, Award, Medal, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 
-interface ProjectModalProps {
+interface AchievementModalProps {
   isOpen: boolean;
   onClose: () => void;
   title: string;
   category: string;
   categoryColor: string;
-  images: string[];
+  date: string;
   description: string;
-  detailedDescription: string;
-  technologies: string[];
-  impact?: string;
+  images?: string[];
+  award: string;
+  organizer: string;
+  detailedDescription?: string;
   achievements?: string[];
   link?: string;
-  github?: string;
 }
 
-export default function ProjectModal({
+export default function AchievementModal({
   isOpen,
   onClose,
   title,
   category,
   categoryColor,
-  images,
+  date,
   description,
+  images = [],
+  award,
+  organizer,
   detailedDescription,
-  technologies,
-  impact,
   achievements,
   link,
-  github,
-}: ProjectModalProps) {
+}: AchievementModalProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
@@ -67,7 +67,7 @@ export default function ProjectModal({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: 'spring', duration: 0.5 }}
-              className="bg-white rounded-[var(--radius-xl)] shadow-2xl border-[3px] border-[var(--card-border)] w-full max-w-6xl max-h-[90vh] overflow-hidden my-8"
+              className="bg-white rounded-[var(--radius-xl)] shadow-2xl border-[3px] border-[var(--card-border)] w-full max-w-4xl max-h-[90vh] overflow-hidden my-8"
             >
               {/* Close Button */}
               <button
@@ -79,8 +79,8 @@ export default function ProjectModal({
 
               <div className="flex flex-col lg:flex-row h-full max-h-[90vh]">
                 {/* Left: Image Slider */}
-                <div className="lg:w-1/2 bg-[var(--card-bg)] relative flex items-center justify-center min-h-[300px] lg:min-h-[600px]">
-                  {/* Image */}
+                <div className="lg:w-2/5 bg-[var(--card-bg)] relative flex items-center justify-center min-h-[300px] lg:min-h-[600px]">
+                  {/* Image Slider */}
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentImageIndex}
@@ -90,16 +90,14 @@ export default function ProjectModal({
                       transition={{ duration: 0.3 }}
                       className="w-full h-full flex items-center justify-center p-8"
                     >
-                      {images[currentImageIndex] ? (
+                      {images.length > 0 && images[currentImageIndex] ? (
                         <img
                           src={images[currentImageIndex]}
                           alt={`${title} - Image ${currentImageIndex + 1}`}
                           className="max-w-full max-h-full object-contain rounded-lg"
                         />
                       ) : (
-                        <div className="text-6xl font-bold text-[var(--text-primary)]/20">
-                          {title.charAt(0)}
-                        </div>
+                        <Trophy size={120} className="text-[var(--card-shadow)]/30" />
                       )}
                     </motion.div>
                   </AnimatePresence>
@@ -126,24 +124,47 @@ export default function ProjectModal({
                           <button
                             key={index}
                             onClick={() => setCurrentImageIndex(index)}
-                            className={`w-2 h-2 rounded-full transition-all ${
+                            className={`h-2 rounded-full transition-all ${
                               index === currentImageIndex
                                 ? 'bg-[var(--button-primary-bg)] w-6'
-                                : 'bg-[var(--button-primary-bg)]/30'
+                                : 'bg-[var(--button-primary-bg)]/30 w-2'
                             }`}
                           />
                         ))}
                       </div>
+
+                      {/* Image Count Badge */}
+                      <div className="absolute top-4 left-4 px-3 py-1.5 bg-black/70 text-white text-xs rounded-lg backdrop-blur-md border border-white/10">
+                        {currentImageIndex + 1} / {images.length}
+                      </div>
                     </>
+                  )}
+
+                  {/* Award Badge */}
+                  <div className="absolute top-4 right-4 flex items-center gap-2 px-3 py-2 bg-[var(--button-primary-bg)] text-white text-sm font-medium rounded-lg backdrop-blur-md border-2 border-white/20">
+                    <Medal size={18} />
+                    <span>{award}</span>
+                  </div>
+
+                  {/* Category Badge */}
+                  {!images.length && (
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
+                      <span
+                        className="inline-block px-3 py-1.5 rounded-lg text-xs font-medium text-white border-2 border-white/20 backdrop-blur-md"
+                        style={{ backgroundColor: categoryColor }}
+                      >
+                        {category}
+                      </span>
+                    </div>
                   )}
                 </div>
 
                 {/* Right: Content */}
-                <div className="lg:w-1/2 overflow-y-auto p-8 lg:p-12">
-                  {/* Category Badge */}
-                  <div className="mb-4">
+                <div className="lg:w-3/5 overflow-y-auto p-8 lg:p-12">
+                  {/* Category Badge (for content side) */}
+                  <div className="mb-3">
                     <span
-                      className="inline-block px-3 py-1 rounded-lg text-xs font-medium text-white border-2 border-white/20"
+                      className="inline-block px-3 py-1.5 rounded-lg text-xs font-medium text-white border-2 border-white/20"
                       style={{ backgroundColor: categoryColor }}
                     >
                       {category}
@@ -151,9 +172,25 @@ export default function ProjectModal({
                   </div>
 
                   {/* Title */}
-                  <h2 className="text-2xl md:text-3xl font-normal text-[var(--text-primary)] mb-4">
+                  <h2 className="text-2xl md:text-3xl font-medium text-[var(--text-primary)] mb-4">
                     {title}
                   </h2>
+
+                  {/* Meta Info */}
+                  <div className="flex flex-wrap gap-4 mb-6">
+                    <div className="flex items-center gap-2">
+                      <Award className="w-5 h-5 text-[var(--accent-green)]" />
+                      <span className="text-sm text-[var(--text-primary)] font-medium">
+                        {organizer}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-5 h-5 text-[var(--text-secondary)]" />
+                      <span className="text-sm text-[var(--text-secondary)]">
+                        {date}
+                      </span>
+                    </div>
+                  </div>
 
                   {/* Short Description */}
                   <p className="text-[var(--text-secondary)] text-base mb-6 leading-relaxed">
@@ -161,28 +198,22 @@ export default function ProjectModal({
                   </p>
 
                   {/* Detailed Description */}
-                  <div className="mb-6">
-                    <h3 className="text-lg font-medium text-[var(--text-primary)] mb-3">Project Details</h3>
-                    <p className="text-[var(--text-secondary)] text-base leading-relaxed">
-                      {detailedDescription}
-                    </p>
-                  </div>
-
-                  {/* Impact */}
-                  {impact && (
+                  {detailedDescription && (
                     <div className="mb-6">
                       <h3 className="text-lg font-medium text-[var(--text-primary)] mb-3">
-                        Impact & Results
+                        Details
                       </h3>
-                      <p className="text-[var(--text-secondary)] text-base leading-relaxed">{impact}</p>
+                      <p className="text-[var(--text-secondary)] text-base leading-relaxed">
+                        {detailedDescription}
+                      </p>
                     </div>
                   )}
 
-                  {/* Achievements */}
+                  {/* Achievements List */}
                   {achievements && achievements.length > 0 && (
                     <div className="mb-6">
                       <h3 className="text-lg font-medium text-[var(--text-primary)] mb-3">
-                        Key Achievements
+                        Key Highlights
                       </h3>
                       <ul className="space-y-2">
                         {achievements.map((achievement, index) => (
@@ -195,48 +226,18 @@ export default function ProjectModal({
                     </div>
                   )}
 
-                  {/* Technologies */}
-                  <div className="mb-6">
-                    <h3 className="text-lg font-medium text-[var(--text-primary)] mb-3">
-                      Technologies Used
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {technologies.map((tech, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1 bg-[var(--card-bg)] text-[var(--text-primary)] text-sm rounded-lg border border-[var(--card-border)]"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Links */}
-                  {(link || github) && (
-                    <div className="flex gap-3 pt-4 border-t border-[var(--card-border)]/10">
-                      {link && (
-                        <a
-                          href={link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-6 py-3 bg-[var(--button-primary-bg)] text-white rounded-[var(--radius-md)] hover:bg-[var(--card-shadow)] transition-colors border-2 border-[var(--card-border)] font-medium"
-                        >
-                          <ExternalLink size={18} />
-                          Visit Project
-                        </a>
-                      )}
-                      {github && (
-                        <a
-                          href={github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-6 py-3 bg-white border-2 border-[var(--card-border)] text-[var(--text-primary)] rounded-[var(--radius-md)] hover:shadow-[var(--shadow-sm)] transition-all font-medium"
-                        >
-                          <Github size={18} />
-                          View Code
-                        </a>
-                      )}
+                  {/* Link Button */}
+                  {link && (
+                    <div className="pt-4 border-t border-[var(--card-border)]/10">
+                      <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--button-primary-bg)] text-white rounded-[var(--radius-md)] hover:bg-[var(--card-shadow)] transition-colors border-2 border-[var(--card-border)] font-medium"
+                      >
+                        <ExternalLink size={18} />
+                        View Certificate
+                      </a>
                     </div>
                   )}
                 </div>

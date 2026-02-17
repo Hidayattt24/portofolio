@@ -1,5 +1,6 @@
 {
   "nav": {
+    "home": "Home",
     "about": "About",
     "experience": "Experience",
     "projects": "Projects",
@@ -26,6 +27,107 @@
     "github": "GitHub",
     "x": "X",
     "instagram": "Instagram"
+  },
+  "about": {
+    "title": "About Me",
+    "intro": "Hello! I'm a passionate Full-Stack Developer with a strong focus on creating innovative and efficient web solutions.",
+    "description": "With expertise in modern web technologies and a deep interest in AI and Large Language Models, I build applications that combine cutting-edge technology with exceptional user experiences.",
+    "passion": "I'm constantly learning and exploring new technologies to deliver the best solutions for my clients and projects."
+  },
+  "techStack": {
+    "title": "Tech Stack",
+    "frontend": {
+      "title": "Frontend",
+      "tech1": "React / Next.js",
+      "tech2": "TypeScript",
+      "tech3": "Tailwind CSS",
+      "tech4": "Framer Motion"
+    },
+    "backend": {
+      "title": "Backend",
+      "tech1": "Node.js",
+      "tech2": "Express",
+      "tech3": "Python",
+      "tech4": "FastAPI"
+    },
+    "database": {
+      "title": "Database",
+      "tech1": "PostgreSQL",
+      "tech2": "MongoDB",
+      "tech3": "Redis",
+      "tech4": "Prisma"
+    },
+    "mobile": {
+      "title": "Mobile",
+      "tech1": "React Native",
+      "tech2": "Flutter",
+      "tech3": "Expo"
+    },
+    "design": {
+      "title": "Design Tools",
+      "tech1": "Figma",
+      "tech2": "Webflow",
+      "tech3": "Framer"
+    },
+    "others": {
+      "title": "Others",
+      "tech1": "Git & GitHub",
+      "tech2": "Docker",
+      "tech3": "AI & LLM APIs"
+    }
+  },
+  "softSkills": {
+    "title": "Soft Skills",
+    "skill1": {
+      "name": "Teamwork",
+      "icon": "Users",
+      "description": "Collaborating effectively with cross-functional teams to achieve common goals"
+    },
+    "skill2": {
+      "name": "Communication",
+      "icon": "MessageSquare",
+      "description": "Clearly conveying ideas and technical concepts to both technical and non-technical audiences"
+    },
+    "skill3": {
+      "name": "Problem Solving",
+      "icon": "Lightbulb",
+      "description": "Analyzing complex problems and developing innovative solutions"
+    },
+    "skill4": {
+      "name": "Adaptability",
+      "icon": "TrendingUp",
+      "description": "Quickly learning and adapting to new technologies and changing requirements"
+    },
+    "skill5": {
+      "name": "Time Management",
+      "icon": "Clock",
+      "description": "Efficiently managing multiple projects and meeting deadlines"
+    },
+    "skill6": {
+      "name": "Critical Thinking",
+      "icon": "Puzzle",
+      "description": "Making informed decisions through logical analysis and evaluation"
+    }
+  },
+  "languages": {
+    "title": "Languages",
+    "proficiency": "Proficiency",
+    "note": "Open to learning new languages and adapting to multicultural environments",
+    "lang1": {
+      "name": "Indonesian",
+      "level": "Native",
+      "proficiency": "100"
+    },
+    "lang2": {
+      "name": "English",
+      "level": "Professional",
+      "proficiency": "85"
+    },
+    "lang3": {
+      "name": "Japanese",
+      "level": "Basic",
+      "proficiency": "40"
+    }
   },
   "experience": {
     "title": "Experience"

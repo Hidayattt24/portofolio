@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { 
+  Home,
   User, 
   Award, 
   Briefcase,
@@ -17,7 +18,8 @@ import {
 import LanguageToggle from '../LanguageToggle';
 
 const navItems = [
-  { name: 'about', path: '/', icon: User },
+  { name: 'home', path: '/home', icon: Home },
+  { name: 'about', path: '/about', icon: User },
   { name: 'experience', path: '/experience', icon: Award },
   { name: 'projects', path: '/projects', icon: Briefcase },
   { name: 'achievements', path: '/achievements', icon: Trophy },

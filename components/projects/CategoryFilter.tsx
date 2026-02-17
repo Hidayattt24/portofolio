@@ -52,10 +52,10 @@ export default function CategoryFilter({ activeCategory, onCategoryChange }: Cat
           <motion.button
             key={category.id}
             onClick={() => onCategoryChange(category.id)}
-            className={`px-6 py-3 rounded-xl text-sm font-medium transition-all whitespace-nowrap ${
+            className={`px-6 py-3 rounded-[var(--radius-md)] text-sm font-medium transition-all whitespace-nowrap border-2 ${
               activeCategory === category.id
-                ? 'text-white'
-                : 'bg-white text-[var(--text-primary)] border-2 border-[var(--card-border)]/10 hover:border-[var(--card-border)]/30'
+                ? 'text-white border-[var(--card-border)] shadow-[var(--shadow-sm)]'
+                : 'bg-white text-[var(--text-primary)] border-[var(--card-border)] hover:shadow-[var(--shadow-sm)]'
             }`}
             style={{
               backgroundColor: activeCategory === category.id ? category.color : undefined,
@@ -79,10 +79,10 @@ export default function CategoryFilter({ activeCategory, onCategoryChange }: Cat
           <motion.button
             key={category.id}
             onClick={() => onCategoryChange(category.id)}
-            className={`px-4 py-2 rounded-full text-xs font-medium transition-all whitespace-nowrap ${
+            className={`px-4 py-2 rounded-[var(--radius-md)] text-xs font-medium transition-all whitespace-nowrap border-2 ${
               activeCategory === category.id
-                ? 'text-white'
-                : 'bg-white text-[var(--text-primary)] border-2 border-[var(--card-border)]/10'
+                ? 'text-white border-[var(--card-border)]'
+                : 'bg-white text-[var(--text-primary)] border-[var(--card-border)]'
             }`}
             style={{
               backgroundColor: activeCategory === category.id ? category.color : undefined,

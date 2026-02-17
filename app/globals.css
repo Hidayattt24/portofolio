@@ -6,12 +6,12 @@
   --foreground: #25343F;
   
   /* Card Colors */
-  --card-bg: #DCDCDC;
+  --card-bg: #F0F0DB;
   --card-border: #000000;  /* Changed to black for classic look */
   --card-shadow: #5A7863;
   
   /* Button Colors */
-  --button-primary-bg: #000000;  /* Changed to black */
+  --button-primary-bg: #213448;  /* Changed to black */
   --button-primary-text: #ffffff;
   --button-secondary-bg: #ffffff;
   --button-secondary-text: #25343F;

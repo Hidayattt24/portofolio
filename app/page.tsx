@@ -1,11 +1,5 @@
-import { BioCard } from "@/components/bio-card";
-import SocialLinks from "@/components/SocialLinks";
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  return (
-    <div className="w-full flex flex-col gap-8">
-      <BioCard />
-      <SocialLinks />
-    </div>
-  );
+export default function RootPage() {
+  redirect('/home');
 }

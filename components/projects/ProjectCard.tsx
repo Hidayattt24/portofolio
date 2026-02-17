@@ -34,10 +34,10 @@ export default function ProjectCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-[var(--card-bg)] rounded-[var(--radius-xl)] border-[3px] border-[var(--card-border)] transition-all duration-300 group"
+      className="bg-[var(--card-bg)] rounded-[var(--radius-xl)] border-[3px] border-[var(--card-border)] shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)] transition-all duration-300 group"
     >
       {/* Image Preview */}
-      <div className="relative h-40 md:h-48 overflow-hidden bg-gradient-to-br from-[var(--card-bg)] to-[var(--card-shadow)]">
+      <div className="relative h-40 md:h-48 overflow-hidden rounded-t-[var(--radius-xl)] bg-gradient-to-br from-[var(--card-bg)] to-[var(--card-shadow)]">
         {images[0] ? (
           <img
             src={images[0]}
@@ -52,7 +52,7 @@ export default function ProjectCard({
 
         {/* Image Count Badge */}
         {images.length > 1 && (
-          <div className="absolute top-4 right-4 px-3 py-1 bg-black/70 text-white text-xs rounded-full backdrop-blur-sm">
+          <div className="absolute top-4 right-4 px-3 py-1.5 bg-black/70 text-white text-xs rounded-lg backdrop-blur-md border border-white/10">
             {images.length} Images
           </div>
         )}
@@ -71,7 +71,7 @@ export default function ProjectCard({
         {/* Category Badge */}
         <div className="mb-2">
           <span
-            className="inline-block px-2 py-1 rounded-full text-xs font-medium text-white"
+            className="inline-block px-3 py-1 rounded-lg text-xs font-medium text-white border-2 border-white/20"
             style={{ backgroundColor: categoryColor }}
           >
             {category}
@@ -91,7 +91,7 @@ export default function ProjectCard({
           {technologies.slice(0, 3).map((tech, index) => (
             <span
               key={index}
-              className="px-2 py-0.5 bg-white text-[var(--text-primary)] text-xs rounded-full border border-[var(--card-border)]/10"
+              className="px-2 py-0.5 bg-white text-[var(--text-primary)] text-xs rounded-lg border border-[var(--card-border)]"
             >
               {tech}
             </span>
@@ -106,7 +106,7 @@ export default function ProjectCard({
         {/* View Details Button */}
         <motion.button
           onClick={onViewDetails}
-          className="w-full flex items-center justify-center gap-1.5 px-4 py-2 bg-[var(--button-primary-bg)] text-white rounded-lg text-sm font-normal hover:bg-[var(--card-shadow)] transition-colors"
+          className="w-full flex items-center justify-center gap-1.5 px-4 py-2.5 bg-[var(--button-primary-bg)] text-white rounded-[var(--radius-md)] text-sm font-medium hover:bg-[var(--card-shadow)] transition-colors border-2 border-[var(--card-border)]"
           whileHover={{ scale: 1.02, y: -2 }}
           whileTap={{ scale: 0.98 }}
         >

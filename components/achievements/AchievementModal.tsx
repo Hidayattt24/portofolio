@@ -1,8 +1,17 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, Trophy, Calendar, Award, Medal, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  X,
+  Trophy,
+  Calendar,
+  Award,
+  Medal,
+  ExternalLink,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
 interface AchievementModalProps {
   isOpen: boolean;
@@ -37,6 +46,17 @@ export default function AchievementModal({
 }: AchievementModalProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
   };
@@ -61,12 +81,12 @@ export default function AchievementModal({
           />
 
           {/* Modal */}
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ type: 'spring', duration: 0.5 }}
+              transition={{ type: "spring", duration: 0.5 }}
               className="bg-white rounded-[var(--radius-xl)] shadow-2xl border-[3px] border-[var(--card-border)] w-full max-w-4xl max-h-[90vh] overflow-hidden my-8"
             >
               {/* Close Button */}
@@ -97,7 +117,10 @@ export default function AchievementModal({
                           className="max-w-full max-h-full object-contain rounded-lg"
                         />
                       ) : (
-                        <Trophy size={120} className="text-[var(--card-shadow)]/30" />
+                        <Trophy
+                          size={120}
+                          className="text-[var(--card-shadow)]/30"
+                        />
                       )}
                     </motion.div>
                   </AnimatePresence>
@@ -109,13 +132,19 @@ export default function AchievementModal({
                         onClick={prevImage}
                         className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-white/90 rounded-[var(--radius-md)] hover:bg-white transition-colors border-2 border-[var(--card-border)]"
                       >
-                        <ChevronLeft size={24} className="text-[var(--text-primary)]" />
+                        <ChevronLeft
+                          size={24}
+                          className="text-[var(--text-primary)]"
+                        />
                       </button>
                       <button
                         onClick={nextImage}
                         className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-white/90 rounded-[var(--radius-md)] hover:bg-white transition-colors border-2 border-[var(--card-border)]"
                       >
-                        <ChevronRight size={24} className="text-[var(--text-primary)]" />
+                        <ChevronRight
+                          size={24}
+                          className="text-[var(--text-primary)]"
+                        />
                       </button>
 
                       {/* Dots Indicator */}
@@ -126,8 +155,8 @@ export default function AchievementModal({
                             onClick={() => setCurrentImageIndex(index)}
                             className={`h-2 rounded-full transition-all ${
                               index === currentImageIndex
-                                ? 'bg-[var(--button-primary-bg)] w-6'
-                                : 'bg-[var(--button-primary-bg)]/30 w-2'
+                                ? "bg-[var(--button-primary-bg)] w-6"
+                                : "bg-[var(--button-primary-bg)]/30 w-2"
                             }`}
                           />
                         ))}
@@ -217,8 +246,13 @@ export default function AchievementModal({
                       </h3>
                       <ul className="space-y-2">
                         {achievements.map((achievement, index) => (
-                          <li key={index} className="flex items-start gap-2 text-[var(--text-secondary)]">
-                            <span className="text-[var(--accent-green)] mt-1">•</span>
+                          <li
+                            key={index}
+                            className="flex items-start gap-2 text-[var(--text-secondary)]"
+                          >
+                            <span className="text-[var(--accent-green)] mt-1">
+                              •
+                            </span>
                             <span>{achievement}</span>
                           </li>
                         ))}

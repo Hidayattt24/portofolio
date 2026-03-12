@@ -1,44 +1,41 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
-import { 
+import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+import {
   Home,
-  User, 
-  Award, 
+  User,
+  Award,
   Briefcase,
   Mail,
   Trophy,
   FileCheck,
-  MessageSquareQuote
-} from 'lucide-react';
-import LanguageToggle from '../LanguageToggle';
+  MessageSquareQuote,
+} from "lucide-react";
 
 const navItems = [
-  { name: 'home', path: '/home', icon: Home },
-  { name: 'about', path: '/about', icon: User },
-  { name: 'experience', path: '/experience', icon: Award },
-  { name: 'projects', path: '/projects', icon: Briefcase },
-  { name: 'achievements', path: '/achievements', icon: Trophy },
-  { name: 'certifications', path: '/certifications', icon: FileCheck },
-  { name: 'testimonials', path: '/testimonials', icon: MessageSquareQuote },
-  { name: 'contact', path: '/contact', icon: Mail },
+  { name: "Home", path: "/home", icon: Home },
+  { name: "About", path: "/about", icon: User },
+  { name: "Experience", path: "/experience", icon: Award },
+  { name: "Projects", path: "/projects", icon: Briefcase },
+  { name: "Achievements", path: "/achievements", icon: Trophy },
+  // { name: "Certifications", path: "/certifications", icon: FileCheck },
+  { name: "Testimonials", path: "/testimonials", icon: MessageSquareQuote },
+  { name: "Contact", path: "/contact", icon: Mail },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-  const t = useTranslations('nav');
 
   return (
     <motion.nav
       initial={{ opacity: 0, x: -30 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
-      className="w-full max-w-[320px] bg-[var(--card-bg)] rounded-[var(--radius-lg)] p-6 border-[3px] border-[var(--card-border)] shadow-[var(--shadow-md)] sticky top-8 flex flex-col"
+      className="hidden md:flex w-full max-w-[320px] bg-[var(--card-bg)] rounded-[var(--radius-lg)] p-6 border-[3px] border-[var(--card-border)] shadow-[var(--shadow-md)] sticky top-8 flex-col"
     >
       <div className="flex flex-col gap-2 flex-1">
         {navItems.map((item, index) => {
@@ -60,9 +57,10 @@ export default function Navbar() {
                 className={`
                   relative flex items-center gap-3 px-4 py-3 rounded-xl
                   transition-all duration-300 cursor-pointer
-                  ${isActive 
-                    ? 'bg-[var(--button-primary-bg)] text-white shadow-md' 
-                    : 'text-[var(--text-primary)] hover:bg-[var(--accent-light)]'
+                  ${
+                    isActive
+                      ? "bg-[var(--button-primary-bg)] text-white shadow-md"
+                      : "text-[var(--text-primary)] hover:bg-[var(--accent-light)]"
                   }
                 `}
               >
@@ -70,19 +68,17 @@ export default function Navbar() {
                   <motion.div
                     layoutId="activeIndicator"
                     className="absolute inset-0 bg-[var(--button-primary-bg)] rounded-xl"
-                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
-                
-                <Icon 
+
+                <Icon
                   className={`relative z-10 w-5 h-5 transition-transform duration-300 ${
-                    isHovered ? 'scale-110' : 'scale-100'
-                  }`} 
+                    isHovered ? "scale-110" : "scale-100"
+                  }`}
                 />
-                
-                <span className="relative z-10 font-medium">
-                  {t(item.name)}
-                </span>
+
+                <span className="relative z-10 font-medium">{item.name}</span>
 
                 {isActive && (
                   <motion.div
@@ -91,11 +87,11 @@ export default function Navbar() {
                     className="ml-auto"
                   >
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path 
-                        d="M7 10L9 12L13 8" 
-                        stroke="currentColor" 
-                        strokeWidth="2" 
-                        strokeLinecap="round" 
+                      <path
+                        d="M7 10L9 12L13 8"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
                         strokeLinejoin="round"
                       />
                     </svg>
@@ -105,11 +101,6 @@ export default function Navbar() {
             </Link>
           );
         })}
-
-        {/* Language Toggle */}
-        <div className="mt-2 pt-2 border-t-2 border-[var(--card-border)]/20">
-          <LanguageToggle />
-        </div>
       </div>
 
       {/* Footer - At the bottom of navbar card */}
@@ -120,10 +111,10 @@ export default function Navbar() {
         className="mt-auto pt-6 border-t-2 border-[var(--card-border)]/20"
       >
         <p className="text-xs text-[var(--text-muted)] text-center">
-          {t('copyright')}
+          COPYRIGHT © 2026
         </p>
         <p className="text-xs text-[var(--text-muted)] text-center mt-1">
-          {t('rights')}
+          Hidayat Nur Hakim. All rights reserved.
         </p>
       </motion.div>
     </motion.nav>

@@ -1,37 +1,34 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
-import { Globe2 } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Globe2 } from "lucide-react";
 
 interface Language {
   name: string;
   level: string;
-  proficiency: number; // 0-100
+  proficiency: number;
   flag: string;
 }
 
 export default function Languages() {
-  const t = useTranslations('languages');
-
   const languages: Language[] = [
     {
-      name: t('lang1.name'),
-      level: t('lang1.level'),
-      proficiency: parseInt(t('lang1.proficiency')),
-      flag: '🇮🇩',
+      name: "Indonesian",
+      level: "Native",
+      proficiency: 100,
+      flag: "🇮🇩",
     },
     {
-      name: t('lang2.name'),
-      level: t('lang2.level'),
-      proficiency: parseInt(t('lang2.proficiency')),
-      flag: '🇬🇧',
+      name: "English",
+      level: "Professional",
+      proficiency: 85,
+      flag: "🇬🇧",
     },
     {
-      name: t('lang3.name'),
-      level: t('lang3.level'),
-      proficiency: parseInt(t('lang3.proficiency')),
-      flag: '🇯🇵',
+      name: "Japanese",
+      level: "Basic",
+      proficiency: 40,
+      flag: "🇯🇵",
     },
   ];
 
@@ -48,7 +45,7 @@ export default function Languages() {
         transition={{ delay: 0.8, duration: 0.5 }}
         className="text-3xl md:text-4xl font-normal text-[var(--text-primary)] mb-8"
       >
-        {t('title')}
+        Languages
       </motion.h2>
 
       <div className="space-y-6">
@@ -62,7 +59,7 @@ export default function Languages() {
           >
             <div className="flex items-center gap-4 mb-4">
               <div className="text-4xl">{language.flag}</div>
-              
+
               <div className="flex-1">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-xl font-medium text-[var(--text-primary)]">
@@ -72,20 +69,24 @@ export default function Languages() {
                     {language.level}
                   </span>
                 </div>
-                
+
                 {/* Progress Bar */}
                 <div className="relative w-full h-3 bg-[var(--card-bg)] rounded-full border border-[var(--card-border)] overflow-hidden">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${language.proficiency}%` }}
-                    transition={{ delay: 1.2 + index * 0.15, duration: 0.8, ease: 'easeOut' }}
+                    transition={{
+                      delay: 1.2 + index * 0.15,
+                      duration: 0.8,
+                      ease: "easeOut",
+                    }}
                     className="absolute top-0 left-0 h-full bg-[var(--accent-green)] rounded-full"
                   />
                 </div>
-                
+
                 <div className="flex justify-between items-center mt-2">
                   <span className="text-xs text-[var(--text-secondary)]">
-                    {t('proficiency')}
+                    Proficiency
                   </span>
                   <span className="text-xs font-medium text-[var(--text-primary)]">
                     {language.proficiency}%
@@ -106,7 +107,8 @@ export default function Languages() {
       >
         <Globe2 className="w-5 h-5 text-[var(--accent-green)]" />
         <p className="text-sm text-[var(--text-secondary)]">
-          {t('note')}
+          Open to learning new languages and adapting to multicultural
+          environments
         </p>
       </motion.div>
     </motion.section>

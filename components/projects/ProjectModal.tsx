@@ -1,8 +1,14 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight, ExternalLink, Github } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  X,
+  ChevronLeft,
+  ChevronRight,
+  ExternalLink,
+  Github,
+} from "lucide-react";
 
 interface ProjectModalProps {
   isOpen: boolean;
@@ -37,6 +43,17 @@ export default function ProjectModal({
 }: ProjectModalProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
   };
@@ -61,12 +78,12 @@ export default function ProjectModal({
           />
 
           {/* Modal */}
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ type: 'spring', duration: 0.5 }}
+              transition={{ type: "spring", duration: 0.5 }}
               className="bg-white rounded-[var(--radius-xl)] shadow-2xl border-[3px] border-[var(--card-border)] w-full max-w-6xl max-h-[90vh] overflow-hidden my-8"
             >
               {/* Close Button */}
@@ -111,13 +128,19 @@ export default function ProjectModal({
                         onClick={prevImage}
                         className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-white/90 rounded-[var(--radius-md)] hover:bg-white transition-colors border-2 border-[var(--card-border)]"
                       >
-                        <ChevronLeft size={24} className="text-[var(--text-primary)]" />
+                        <ChevronLeft
+                          size={24}
+                          className="text-[var(--text-primary)]"
+                        />
                       </button>
                       <button
                         onClick={nextImage}
                         className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-white/90 rounded-[var(--radius-md)] hover:bg-white transition-colors border-2 border-[var(--card-border)]"
                       >
-                        <ChevronRight size={24} className="text-[var(--text-primary)]" />
+                        <ChevronRight
+                          size={24}
+                          className="text-[var(--text-primary)]"
+                        />
                       </button>
 
                       {/* Dots Indicator */}
@@ -128,8 +151,8 @@ export default function ProjectModal({
                             onClick={() => setCurrentImageIndex(index)}
                             className={`w-2 h-2 rounded-full transition-all ${
                               index === currentImageIndex
-                                ? 'bg-[var(--button-primary-bg)] w-6'
-                                : 'bg-[var(--button-primary-bg)]/30'
+                                ? "bg-[var(--button-primary-bg)] w-6"
+                                : "bg-[var(--button-primary-bg)]/30"
                             }`}
                           />
                         ))}
@@ -162,7 +185,9 @@ export default function ProjectModal({
 
                   {/* Detailed Description */}
                   <div className="mb-6">
-                    <h3 className="text-lg font-medium text-[var(--text-primary)] mb-3">Project Details</h3>
+                    <h3 className="text-lg font-medium text-[var(--text-primary)] mb-3">
+                      Project Details
+                    </h3>
                     <p className="text-[var(--text-secondary)] text-base leading-relaxed">
                       {detailedDescription}
                     </p>
@@ -174,7 +199,9 @@ export default function ProjectModal({
                       <h3 className="text-lg font-medium text-[var(--text-primary)] mb-3">
                         Impact & Results
                       </h3>
-                      <p className="text-[var(--text-secondary)] text-base leading-relaxed">{impact}</p>
+                      <p className="text-[var(--text-secondary)] text-base leading-relaxed">
+                        {impact}
+                      </p>
                     </div>
                   )}
 
@@ -186,8 +213,13 @@ export default function ProjectModal({
                       </h3>
                       <ul className="space-y-2">
                         {achievements.map((achievement, index) => (
-                          <li key={index} className="flex items-start gap-2 text-[var(--text-secondary)]">
-                            <span className="text-[var(--accent-green)] mt-1">•</span>
+                          <li
+                            key={index}
+                            className="flex items-start gap-2 text-[var(--text-secondary)]"
+                          >
+                            <span className="text-[var(--accent-green)] mt-1">
+                              •
+                            </span>
                             <span>{achievement}</span>
                           </li>
                         ))}

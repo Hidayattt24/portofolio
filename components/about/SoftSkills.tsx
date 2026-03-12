@@ -1,17 +1,15 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
-import { 
-  Users, 
-  MessageSquare, 
-  Lightbulb, 
-  Target, 
-  Clock, 
+import { motion } from "framer-motion";
+import {
+  Users,
+  MessageSquare,
+  Lightbulb,
+  TrendingUp,
+  Clock,
   Puzzle,
   Heart,
-  TrendingUp
-} from 'lucide-react';
+} from "lucide-react";
 
 interface Skill {
   name: string;
@@ -20,49 +18,52 @@ interface Skill {
 }
 
 export default function SoftSkills() {
-  const t = useTranslations('softSkills');
-
   const iconMap: { [key: string]: any } = {
     Users,
     MessageSquare,
     Lightbulb,
-    Target,
+    TrendingUp,
     Clock,
     Puzzle,
     Heart,
-    TrendingUp,
   };
 
   const skills: Skill[] = [
     {
-      name: t('skill1.name'),
-      icon: iconMap[t('skill1.icon')] || Users,
-      description: t('skill1.description'),
+      name: "Teamwork",
+      icon: Users,
+      description:
+        "Collaborating effectively with cross-functional teams to achieve common goals",
     },
     {
-      name: t('skill2.name'),
-      icon: iconMap[t('skill2.icon')] || MessageSquare,
-      description: t('skill2.description'),
+      name: "Communication",
+      icon: MessageSquare,
+      description:
+        "Clearly conveying ideas and technical concepts to both technical and non-technical audiences",
     },
     {
-      name: t('skill3.name'),
-      icon: iconMap[t('skill3.icon')] || Lightbulb,
-      description: t('skill3.description'),
+      name: "Problem Solving",
+      icon: Lightbulb,
+      description:
+        "Analyzing complex problems and developing innovative solutions",
     },
     {
-      name: t('skill4.name'),
-      icon: iconMap[t('skill4.icon')] || Target,
-      description: t('skill4.description'),
+      name: "Adaptability",
+      icon: TrendingUp,
+      description:
+        "Quickly learning and adapting to new technologies and changing requirements",
     },
     {
-      name: t('skill5.name'),
-      icon: iconMap[t('skill5.icon')] || Clock,
-      description: t('skill5.description'),
+      name: "Time Management",
+      icon: Clock,
+      description:
+        "Efficiently managing multiple projects and meeting deadlines",
     },
     {
-      name: t('skill6.name'),
-      icon: iconMap[t('skill6.icon')] || Puzzle,
-      description: t('skill6.description'),
+      name: "Critical Thinking",
+      icon: Puzzle,
+      description:
+        "Making informed decisions through logical analysis and evaluation",
     },
   ];
 
@@ -79,13 +80,13 @@ export default function SoftSkills() {
         transition={{ delay: 0.6, duration: 0.5 }}
         className="text-3xl md:text-4xl font-normal text-[var(--text-primary)] mb-8"
       >
-        {t('title')}
+        Soft Skills
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skills.map((skill, index) => {
           const Icon = skill.icon;
-          
+
           return (
             <motion.div
               key={index}
@@ -99,11 +100,11 @@ export default function SoftSkills() {
                 <div className="w-16 h-16 bg-[var(--accent-green)] rounded-2xl flex items-center justify-center">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-lg font-medium text-[var(--text-primary)]">
                   {skill.name}
                 </h3>
-                
+
                 <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
                   {skill.description}
                 </p>

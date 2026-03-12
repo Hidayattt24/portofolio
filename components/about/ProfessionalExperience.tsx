@@ -1,8 +1,7 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
-import { Briefcase, Calendar, MapPin } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 interface Experience {
   company: string;
@@ -13,23 +12,7 @@ interface Experience {
 }
 
 export default function ProfessionalExperience() {
-  const t = useTranslations('professionalExperience');
-
-  // This would ideally come from your data source
-  const experiences: Experience[] = [
-    {
-      company: t('exp1.company'),
-      position: t('exp1.position'),
-      period: t('exp1.period'),
-      location: t('exp1.location'),
-      description: [
-        t('exp1.desc1'),
-        t('exp1.desc2'),
-        t('exp1.desc3'),
-      ],
-    },
-    // Add more experiences as needed
-  ];
+  const experiences: Experience[] = [];
 
   return (
     <motion.section
@@ -44,7 +27,7 @@ export default function ProfessionalExperience() {
         transition={{ delay: 0.4, duration: 0.5 }}
         className="text-3xl md:text-4xl font-normal text-[var(--text-primary)] mb-8"
       >
-        {t('title')}
+        Professional Experience
       </motion.h2>
 
       <div className="space-y-6">
@@ -60,7 +43,7 @@ export default function ProfessionalExperience() {
               <div className="w-12 h-12 bg-[var(--button-primary-bg)] rounded-xl flex items-center justify-center flex-shrink-0">
                 <Briefcase className="w-6 h-6 text-white" />
               </div>
-              
+
               <div className="flex-1">
                 <h3 className="text-xl md:text-2xl font-medium text-[var(--text-primary)] mb-1">
                   {exp.position}
@@ -68,7 +51,7 @@ export default function ProfessionalExperience() {
                 <p className="text-lg text-[var(--accent-green)] font-medium mb-2">
                   {exp.company}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-4 text-sm text-[var(--text-secondary)]">
                   <div className="flex items-center gap-1">
                     <Calendar className="w-4 h-4" />

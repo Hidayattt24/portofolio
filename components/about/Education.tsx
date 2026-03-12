@@ -1,8 +1,7 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
-import { GraduationCap, Calendar, MapPin, Award } from 'lucide-react';
+import { motion } from "framer-motion";
+import { GraduationCap, Calendar, MapPin, Award } from "lucide-react";
 
 interface EducationItem {
   school: string;
@@ -14,22 +13,7 @@ interface EducationItem {
 }
 
 export default function Education() {
-  const t = useTranslations('education');
-
-  const educationList: EducationItem[] = [
-    {
-      school: t('edu1.school'),
-      degree: t('edu1.degree'),
-      field: t('edu1.field'),
-      period: t('edu1.period'),
-      location: t('edu1.location'),
-      achievements: [
-        t('edu1.achievement1'),
-        t('edu1.achievement2'),
-      ],
-    },
-    // Add more education items as needed
-  ];
+  const educationList: EducationItem[] = [];
 
   return (
     <motion.section
@@ -44,7 +28,7 @@ export default function Education() {
         transition={{ delay: 0.6, duration: 0.5 }}
         className="text-3xl md:text-4xl font-normal text-[var(--text-primary)] mb-8"
       >
-        {t('title')}
+        Education
       </motion.h2>
 
       <div className="space-y-6">
@@ -60,7 +44,7 @@ export default function Education() {
               <div className="w-12 h-12 bg-[var(--accent-green)] rounded-xl flex items-center justify-center flex-shrink-0">
                 <GraduationCap className="w-6 h-6 text-white" />
               </div>
-              
+
               <div className="flex-1">
                 <h3 className="text-xl md:text-2xl font-medium text-[var(--text-primary)] mb-1">
                   {edu.degree} - {edu.field}
@@ -68,7 +52,7 @@ export default function Education() {
                 <p className="text-lg text-[var(--accent-green)] font-medium mb-2">
                   {edu.school}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-4 text-sm text-[var(--text-secondary)]">
                   <div className="flex items-center gap-1">
                     <Calendar className="w-4 h-4" />
@@ -87,7 +71,7 @@ export default function Education() {
                 <div className="flex items-center gap-2 mb-3">
                   <Award className="w-4 h-4 text-[var(--accent-green)]" />
                   <span className="text-sm font-medium text-[var(--text-primary)]">
-                    {t('achievements')}
+                    {t("achievements")}
                   </span>
                 </div>
                 <ul className="space-y-2">
@@ -96,7 +80,9 @@ export default function Education() {
                       key={achIndex}
                       className="text-base text-[var(--text-secondary)] leading-relaxed flex items-start gap-2"
                     >
-                      <span className="text-[var(--accent-green)] mt-1.5">•</span>
+                      <span className="text-[var(--accent-green)] mt-1.5">
+                        •
+                      </span>
                       <span className="flex-1">{achievement}</span>
                     </li>
                   ))}

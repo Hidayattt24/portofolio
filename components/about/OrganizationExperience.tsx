@@ -1,8 +1,7 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
-import { Users, Calendar, Award } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Users, Calendar, Award } from "lucide-react";
 
 interface OrgExperience {
   organization: string;
@@ -12,21 +11,7 @@ interface OrgExperience {
 }
 
 export default function OrganizationExperience() {
-  const t = useTranslations('organizationExperience');
-
-  const organizations: OrgExperience[] = [
-    {
-      organization: t('org1.organization'),
-      position: t('org1.position'),
-      period: t('org1.period'),
-      achievements: [
-        t('org1.achievement1'),
-        t('org1.achievement2'),
-        t('org1.achievement3'),
-      ],
-    },
-    // Add more organizations as needed
-  ];
+  const organizations: OrgExperience[] = [];
 
   return (
     <motion.section
@@ -41,7 +26,7 @@ export default function OrganizationExperience() {
         transition={{ delay: 0.8, duration: 0.5 }}
         className="text-3xl md:text-4xl font-normal text-[var(--text-primary)] mb-8"
       >
-        {t('title')}
+        Organization Experience
       </motion.h2>
 
       <div className="space-y-6">
@@ -57,7 +42,7 @@ export default function OrganizationExperience() {
               <div className="w-12 h-12 bg-[var(--button-primary-bg)] rounded-xl flex items-center justify-center flex-shrink-0">
                 <Users className="w-6 h-6 text-white" />
               </div>
-              
+
               <div className="flex-1">
                 <h3 className="text-xl md:text-2xl font-medium text-[var(--text-primary)] mb-1">
                   {org.position}
@@ -65,7 +50,7 @@ export default function OrganizationExperience() {
                 <p className="text-lg text-[var(--accent-green)] font-medium mb-2">
                   {org.organization}
                 </p>
-                
+
                 <div className="flex items-center gap-1 text-sm text-[var(--text-secondary)]">
                   <Calendar className="w-4 h-4" />
                   <span>{org.period}</span>
@@ -77,7 +62,7 @@ export default function OrganizationExperience() {
               <div className="flex items-center gap-2 mb-3">
                 <Award className="w-4 h-4 text-[var(--accent-green)]" />
                 <span className="text-sm font-medium text-[var(--text-primary)]">
-                  {t('achievements')}
+                  {t("achievements")}
                 </span>
               </div>
               <ul className="space-y-2">

@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import ClientProviders from "@/components/ClientProviders";
-import { Navbar } from "@/components/navbar";
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { Navbar, BottomNav } from "@/components/navbar";
 
 const dmSerif = DM_Serif_Display({
   variable: "--font-dm-serif",
@@ -23,25 +21,20 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const messages = await getMessages();
+  // const messages = await getMessages();
 
   return (
     <html lang="en">
-      <body
-        className={`${dmSerif.variable} antialiased`}
-      >
-        <NextIntlClientProvider messages={messages}>
-          <ClientProviders>
-            <div className="min-h-screen bg-white flex items-start justify-center p-4 md:p-8 pt-8">
-              <div className="w-full max-w-7xl flex gap-8">
-                <Navbar />
-                <main className="flex-1 pb-20">
-                  {children}
-                </main>
-              </div>
+      <body className={`${dmSerif.variable} antialiased`}>
+        <ClientProviders>
+          <div className="min-h-screen bg-white flex items-start justify-center p-4 md:p-8 pt-8">
+            <div className="w-full max-w-7xl flex gap-8">
+              <Navbar />
+              <main className="flex-1 pb-24 md:pb-8">{children}</main>
             </div>
-          </ClientProviders>
-        </NextIntlClientProvider>
+          </div>
+          <BottomNav />
+        </ClientProviders>
       </body>
     </html>
   );

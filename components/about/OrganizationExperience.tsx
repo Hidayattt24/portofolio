@@ -62,7 +62,7 @@ export default function OrganizationExperience() {
               <div className="flex items-center gap-2 mb-3">
                 <Award className="w-4 h-4 text-[var(--accent-green)]" />
                 <span className="text-sm font-medium text-[var(--text-primary)]">
-                  {t("achievements")}
+                  Achievements
                 </span>
               </div>
               <ul className="space-y-2">

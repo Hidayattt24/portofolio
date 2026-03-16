@@ -23,7 +23,7 @@ interface ProjectModalProps {
   impact?: string;
   achievements?: string[];
   link?: string;
-  github?: string;
+  githubRepos?: { label: string; url: string }[];
 }
 
 export default function ProjectModal({
@@ -39,7 +39,7 @@ export default function ProjectModal({
   impact,
   achievements,
   link,
-  github,
+  githubRepos,
 }: ProjectModalProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -245,8 +245,8 @@ export default function ProjectModal({
                   </div>
 
                   {/* Links */}
-                  {(link || github) && (
-                    <div className="flex gap-3 pt-4 border-t border-[var(--card-border)]/10">
+                  {(link || (githubRepos && githubRepos.length > 0)) && (
+                    <div className="flex flex-wrap gap-3 pt-4 border-t border-[var(--card-border)]/10">
                       {link && (
                         <a
                           href={link}
@@ -258,17 +258,18 @@ export default function ProjectModal({
                           Visit Project
                         </a>
                       )}
-                      {github && (
+                      {githubRepos && githubRepos.map((repo, index) => (
                         <a
-                          href={github}
+                          key={index}
+                          href={repo.url}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-2 px-6 py-3 bg-white border-2 border-[var(--card-border)] text-[var(--text-primary)] rounded-[var(--radius-md)] hover:shadow-[var(--shadow-sm)] transition-all font-medium"
                         >
                           <Github size={18} />
-                          View Code
+                          {githubRepos.length > 1 ? `Code (${repo.label})` : 'View Code'}
                         </a>
-                      )}
+                      ))}
                     </div>
                   )}
                 </div>

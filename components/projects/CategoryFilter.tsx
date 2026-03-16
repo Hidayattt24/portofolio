@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-export type ProjectCategory = 'all' | 'client' | 'competition' | 'social' | 'personal';
+export type ProjectCategory = 'all' | 'client' | 'competition' | 'social' | 'personal' | 'intership';
 
 interface CategoryFilterProps {
   activeCategory: ProjectCategory;
@@ -40,6 +40,12 @@ const categories = [
     label: 'Personal',
     color: '#9B59B6',
     description: 'Self-driven innovation',
+  },
+  {
+    id: 'intership' as ProjectCategory,
+    label: 'Intership',
+    color: '#9B0F06',
+    description: 'Intership',
   },
 ];
 

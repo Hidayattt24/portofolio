@@ -7,23 +7,28 @@ import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
 import { projects as projectsData } from '@/data/projects';
 
-// Map data categories to component categories
-const categoryMap: Record<string, ProjectCategory> = {
-  'web': 'client',
-  'mobile': 'personal',
-  'ai': 'competition',
-  'devops': 'client',
-  'other': 'personal',
+type TransformedProject = {
+  id: string;
+  category: Exclude<ProjectCategory, 'all'>;
+  title: string;
+  description: string;
+  detailedDescription: string;
+  technologies: string[];
+  images: string[];
+  impact: string;
+  achievements: string[];
+  link: string;
+  githubRepos: { label: string; url: string }[];
 };
 
 export default function ProjectsSection() {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>('all');
-  const [selectedProject, setSelectedProject] = useState<typeof projectsData[0] | null>(null);
+  const [selectedProject, setSelectedProject] = useState<TransformedProject | null>(null);
 
   // Transform data projects to match component structure
   const projects = projectsData.map((project) => ({
     id: project.id,
-    category: categoryMap[project.category] || 'personal',
+    category: project.category,
     title: project.title,
     description: project.description,
     detailedDescription: project.longDescription,
@@ -32,7 +37,7 @@ export default function ProjectsSection() {
     impact: project.highlights?.join('. ') || '',
     achievements: project.highlights || [],
     link: project.demoUrl || '',
-    github: project.githubUrl || '',
+    githubRepos: project.githubRepos || [],
   }));
 
   const filteredProjects =
@@ -91,7 +96,6 @@ export default function ProjectsSection() {
                   impact={project.impact}
                   achievements={project.achievements}
                   link={project.link}
-                  github={project.github}
                   categoryColor={getCategoryColor(project.category)}
                   onViewDetails={() => setSelectedProject(project)}
                 />
@@ -123,7 +127,7 @@ export default function ProjectsSection() {
           impact={selectedProject.impact}
           achievements={selectedProject.achievements}
           link={selectedProject.link}
-          github={selectedProject.github}
+          githubRepos={selectedProject.githubRepos}
         />
       )}
     </section>

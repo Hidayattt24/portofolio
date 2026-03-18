@@ -101,28 +101,28 @@ export default function CollabsReviewsModal({
             className="fixed inset-0 bg-black/60 backdrop-blur-md z-50"
           />
 
-          {/* Modal */}
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          {/* Modal wrapper — fullscreen on mobile, centered on desktop */}
+          <div className="fixed inset-0 z-50 flex items-start lg:items-center justify-center p-0 lg:p-4">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: 'spring', duration: 0.5 }}
-              className="bg-[var(--card-bg)] rounded-[var(--radius-xl)] shadow-2xl border-[3px] border-[var(--card-border)] w-full max-w-6xl max-h-[90vh] overflow-hidden my-8"
+              className="bg-[var(--card-bg)] rounded-none lg:rounded-[var(--radius-xl)] shadow-2xl border-0 lg:border-[3px] border-[var(--card-border)] w-full lg:max-w-6xl h-full lg:h-auto lg:max-h-[90vh] overflow-y-auto lg:overflow-hidden modal-scrollbar"
             >
-              {/* Close Button */}
+              {/* Close Button — fixed on mobile so always visible */}
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 z-20 p-2 bg-[var(--card-bg)]/90 rounded-[var(--radius-md)] hover:bg-[var(--card-bg)] transition-colors border-2 border-[var(--card-border)]"
+                className="fixed lg:absolute top-3 right-3 z-20 p-2 bg-[var(--card-bg)]/90 rounded-[var(--radius-md)] hover:bg-[var(--card-bg)] transition-colors border-2 border-[var(--card-border)]"
                 aria-label="Close modal"
               >
-                <X size={24} className="text-[var(--text-primary)]" />
+                <X size={20} className="text-[var(--text-primary)]" />
               </button>
 
-              <div className="flex flex-col lg:flex-row h-full max-h-[90vh]">
+              <div className="flex flex-col lg:flex-row lg:h-full lg:max-h-[90vh]">
 
                 {/* ── LEFT: Media Panel ── */}
-                <div className="lg:w-1/2 bg-[var(--card-bg)] relative flex flex-col min-h-[300px] lg:min-h-[600px] border-b-[3px] lg:border-b-0 lg:border-r-[3px] border-[var(--card-border)]">
+                <div className="lg:w-1/2 bg-[var(--card-bg)] relative flex flex-col min-h-[260px] sm:min-h-[320px] lg:min-h-[600px] flex-shrink-0 border-b-[2px] lg:border-b-0 lg:border-r-[3px] border-[var(--card-border)]">
 
                   {/* Tab Bar — only show if more than 1 tab available */}
                   {tabs.length > 1 && (
@@ -320,7 +320,7 @@ export default function CollabsReviewsModal({
                 </div>
 
                 {/* ── RIGHT: Content (scrollable) ── */}
-                <div className="lg:w-1/2 overflow-y-auto p-8 lg:p-10 modal-scrollbar">
+                <div className="lg:w-1/2 lg:overflow-y-auto modal-scrollbar p-5 sm:p-6 lg:p-10 pb-8">
 
                   {/* Person Info */}
                   <div className="flex items-center gap-4 mb-6">

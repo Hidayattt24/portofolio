@@ -87,7 +87,7 @@ export default function AchievementModal({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", duration: 0.5 }}
-              className="bg-white rounded-[var(--radius-xl)] shadow-2xl border-[3px] border-[var(--card-border)] w-full max-w-4xl max-h-[90vh] overflow-hidden my-8"
+              className="bg-white rounded-[var(--radius-xl)] shadow-2xl border-[3px] border-[var(--card-border)] w-full max-w-6xl max-h-[90vh] overflow-hidden my-8"
             >
               {/* Close Button */}
               <button
@@ -99,7 +99,7 @@ export default function AchievementModal({
 
               <div className="flex flex-col lg:flex-row h-full max-h-[90vh]">
                 {/* Left: Image Slider */}
-                <div className="lg:w-2/5 bg-[var(--card-bg)] relative flex items-center justify-center min-h-[300px] lg:min-h-[600px]">
+                <div className="lg:w-1/2 bg-[var(--card-bg)] relative flex items-center justify-center min-h-[300px] lg:min-h-[600px]">
                   {/* Image Slider */}
                   <AnimatePresence mode="wait">
                     <motion.div
@@ -189,7 +189,7 @@ export default function AchievementModal({
                 </div>
 
                 {/* Right: Content */}
-                <div className="lg:w-3/5 overflow-y-auto p-8 lg:p-12">
+                <div className="lg:w-1/2 overflow-y-auto p-8 lg:p-12">
                   {/* Category Badge (for content side) */}
                   <div className="mb-3">
                     <span

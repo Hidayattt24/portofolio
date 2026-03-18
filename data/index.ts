@@ -5,6 +5,6 @@ export * from './home';
 export * from './about';
 export * from './experience';
 export * from './projects';
-export * from './achievements';
+// export * from './achievements';
 export * from './certifications';
-export * from './testimonials';
+export * from './collabs-reviews';

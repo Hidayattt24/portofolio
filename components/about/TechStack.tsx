@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion";
 import {
-  Code2,
   Database,
   Globe,
-  Smartphone,
   Server,
-  Palette,
+  Brain,
+  Cloud,
+  Layout,
 } from "lucide-react";
 
 interface TechCategory {
@@ -18,13 +18,13 @@ interface TechCategory {
 }
 
 export default function TechStack() {
-  const techCategories: TechCategory[] = [
+const techCategories: TechCategory[] = [
     {
       category: "Frontend",
       icon: Globe,
       color: "#5A7863",
       technologies: [
-        "React / Next.js",
+        "React / Next.js 15",
         "TypeScript",
         "Tailwind CSS",
         "Framer Motion",
@@ -34,34 +34,43 @@ export default function TechStack() {
       category: "Backend",
       icon: Server,
       color: "#213448",
-      technologies: ["Node.js", "Express", "Python", "FastAPI"],
+      technologies: ["Node.js / Express.js", "Python", "FastAPI", "RESTful APIs"],
+    },
+    {
+      category: "AI & Machine Learning",
+      icon: Brain, // Ganti Code2 menjadi Brain jika tersedia di library icon kamu
+      color: "#5A7863",
+      technologies: [
+        "RAG (Retrieval-Augmented Generation)",
+        "Google Gemma / LLaMA",
+        "LangChain",
+        "TensorFlow / Scikit-learn",
+      ],
     },
     {
       category: "Database",
       icon: Database,
-      color: "#5A7863",
-      technologies: ["PostgreSQL", "MongoDB", "Redis", "Prisma"],
-    },
-    {
-      category: "Mobile",
-      icon: Smartphone,
       color: "#213448",
-      technologies: ["React Native", "Flutter", "Expo"],
+      technologies: ["PostgreSQL", "Supabase", "FAISS (Vector Store)", "Redis"],
     },
     {
-      category: "Design Tools",
-      icon: Palette,
+      category: "Cloud & DevOps",
+      icon: Cloud, // Ganti Smartphone menjadi Cloud jika tersedia
       color: "#5A7863",
-      technologies: ["Figma", "Webflow", "Framer"],
+      technologies: [
+        "Docker",
+        "CI/CD (GitHub Actions)",
+        "Google Cloud Platform (GCP)",
+        "Monitoring (Grafana)",
+      ],
     },
     {
-      category: "Others",
-      icon: Code2,
+      category: "System Design",
+      icon: Layout, // Ganti Palette menjadi Layout/Pencil
       color: "#213448",
-      technologies: ["Git & GitHub", "Docker", "AI & LLM APIs"],
+      technologies: ["Software Architecture", "Design Patterns", "UML / OCL", "Figma"],
     },
   ];
-
   return (
     <motion.section
       initial={{ opacity: 0, y: 30 }}

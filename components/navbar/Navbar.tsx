@@ -22,7 +22,7 @@ const navItems = [
   { name: "Projects", path: "/projects", icon: Briefcase },
   { name: "Achievements", path: "/achievements", icon: Trophy },
   // { name: "Certifications", path: "/certifications", icon: FileCheck },
-  { name: "Testimonials", path: "/testimonials", icon: MessageSquareQuote },
+  { name: "Collabs & Reviews", path: "/collabs-reviews", icon: MessageSquareQuote },
   { name: "Contact", path: "/contact", icon: Mail },
 ];
 

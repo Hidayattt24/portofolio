@@ -46,19 +46,19 @@ export default function ContactInfo() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      content: 'hello@example.com',
-      link: 'mailto:hello@example.com',
+      content: 'hidayatnurhakim2412@gmail.com',
+      link: 'mailto:hidayatnurhakim2412@gmail.com',
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      content: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
+      content: '+62 822 1156 2536',
+      link: 'tel:+6282211562536',
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
-      content: 'San Francisco, CA',
+      content: 'Banda Aceh, Indonesia',
     },
     {
       icon: <Clock className="w-6 h-6" />,

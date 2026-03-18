@@ -15,9 +15,10 @@ interface CompanyExperienceProps {
   company: string;
   positions: Position[];
   logo?: string;
+  customIcon?: React.ReactNode;
 }
 
-export default function CompanyExperience({ company, positions, logo }: CompanyExperienceProps) {
+export default function CompanyExperience({ company, positions, logo, customIcon }: CompanyExperienceProps) {
   const [expandedPositions, setExpandedPositions] = useState<number[]>([]);
   const maxLength = 150;
 
@@ -41,7 +42,7 @@ export default function CompanyExperience({ company, positions, logo }: CompanyE
             <img src={logo} alt={company} className="w-12 h-12 rounded-lg object-cover" />
           ) : (
             <div className="w-12 h-12 rounded-lg bg-[var(--button-primary-bg)] flex items-center justify-center">
-              <Briefcase className="text-white" size={24} />
+              {customIcon ?? <Briefcase className="text-white" size={24} />}
             </div>
           )}
 

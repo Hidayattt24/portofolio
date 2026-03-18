@@ -11,9 +11,9 @@ interface AvatarProps {
 
 export default function Avatar({ size = 'md', src, alt = 'Avatar' }: AvatarProps) {
   const sizes = {
-    sm: 'w-16 h-16',
-    md: 'w-20 h-20 md:w-24 md:h-24',
-    lg: 'w-28 h-28 md:w-32 md:h-32',
+    sm: 'w-20 h-20',
+    md: 'w-28 h-28 md:w-32 md:h-32',
+    lg: 'w-36 h-36 md:w-44 md:h-44',
   };
 
   return (

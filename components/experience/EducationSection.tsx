@@ -15,29 +15,20 @@ interface EducationItem {
 
 const educationData: EducationItem[] = [
   {
-    school: 'University of Technology',
+    school: 'Universitas Syiah Kuala',
     degree: "Bachelor's Degree",
-    field: 'Computer Science',
-    period: '2018 - 2022',
-    location: 'Jakarta, Indonesia',
+    field: 'Informatics',
+    period: '2022 - Present',
+    location: 'Banda Aceh, Indonesia',
     achievements: [
-      'Graduated with honors (GPA: 3.8/4.0)',
-      'Active member of Programming Club',
-      'Won 2nd place in National Hackathon 2021',
-      'Research on AI and Machine Learning',
+      'Top 20 National Finalist at LIDM 2025 (Digital Education Technology Innovation)',
+      'Top 20 Best Capstone Project @ DBS Foundation Coding Camp 2025',
+      '2nd Winner in National Web Programming Competition (INFINITERA 1.0) 2025',
+      'National Finalist at INFEST XI Hackathon 2025 (GajiBersih Project)',
+      'Head of Student Welfare Management Department @ HMIF USK (2025 - Present)',
+      'Teaching Assistant for Software Architecture and DevOps Courses',
     ],
-  },
-  {
-    school: 'Tech High School',
-    degree: 'High School Diploma',
-    field: 'Science',
-    period: '2015 - 2018',
-    location: 'Jakarta, Indonesia',
-    achievements: [
-      'Top 5% of graduating class',
-      'Member of Robotics Team',
-    ],
-  },
+  }
 ];
 
 export default function EducationSection() {

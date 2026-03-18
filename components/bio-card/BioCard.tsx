@@ -16,7 +16,8 @@ export default function BioCard() {
     >
       {/* Diagonal Marquee */}
       <div className="absolute inset-0 overflow-hidden rounded-[var(--radius-xl)]">
-        <DiagonalMarquee text="LET'S BUILD SOMETHING AMAZING TOGETHER! • " />
+        {/* Mengubah marquee menjadi lebih relevan dengan tech stack kamu */}
+        <DiagonalMarquee text="BUILDING IMPACTFUL CODE • START A PROJECT • SOLVE PROBLEMS TOGETHER •" />
       </div>
 
       {/* Subtle gradient overlay */}
@@ -30,7 +31,7 @@ export default function BioCard() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          <Avatar size="md" src="/about/profile.jpg" alt="Hidayat Nur Hakim" />
+          <Avatar size="lg" src="/about/profile.jpg" alt="Hidayat Nur Hakim" />
 
           <div className="flex-1 w-full">
             {/* Name */}
@@ -50,11 +51,11 @@ export default function BioCard() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              Full-Stack Developer | AI & LLM Enthusiast
+              Software Engineer | Exploring AI & LLM
             </motion.p>
 
             {/* Status Badge */}
-            <Badge showPulse>Available to Works Or Collaboration</Badge>
+            <Badge showPulse>Open for Professional Collaboration</Badge>
           </div>
         </motion.div>
 
@@ -65,14 +66,14 @@ export default function BioCard() {
           transition={{ delay: 0.6, duration: 0.6 }}
         >
           <h2 className="text-xl sm:text-2xl md:text-3xl font-normal text-[var(--text-primary)] mb-3 md:mb-4 leading-snug">
-            Your Digital Vision,
+           Turning Lines of Code
             <br />
-            Perfectly Realized.
+            Into Real-World Impact.
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-[var(--text-secondary)] leading-relaxed max-w-2xl">
-            From concept to launch, I create websites with stunning visuals,
-            seamless user experiences, and expert development in Webflow and
-            Framer.
+            Top 20 Finalist LIDM 2025 • Ex-FE/BE Cohort @ DBS Foundation • Top 20 Capstone DBS 2025 • 
+            Finalist Hackathon INFEST XI • 2nd Winner INFINITERA 1.0 • Ex-AI Intern @ Diskominsa Aceh • 
+            Teaching Assistant @ Informatics USK
           </p>
         </motion.div>
 

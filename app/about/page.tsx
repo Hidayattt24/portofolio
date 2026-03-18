@@ -1,7 +1,7 @@
 import { 
   AboutMe, 
   TechStack, 
-  SoftSkills, 
+  // SoftSkills, 
   Languages 
 } from "@/components/about";
 
@@ -10,7 +10,7 @@ export default function AboutPage() {
     <div className="w-full flex flex-col gap-8">
       <AboutMe />
       <TechStack />
-      <SoftSkills />
+      {/* <SoftSkills /> */}
       <Languages />
     </div>
   );

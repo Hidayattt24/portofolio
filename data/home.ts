@@ -31,12 +31,12 @@ export const bioData: BioData = {
 export const socialLinks: SocialLink[] = [
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/your-profile',
+    url: 'www.linkedin.com/in/hidayat-nur-hakim',
     icon: 'linkedin',
   },
   {
     name: 'GitHub',
-    url: 'https://github.com/your-username',
+    url: 'https://github.com/Hidayattt24',
     icon: 'github',
   },
   {

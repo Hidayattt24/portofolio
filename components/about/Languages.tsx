@@ -21,14 +21,8 @@ export default function Languages() {
     {
       name: "English",
       level: "Professional",
-      proficiency: 85,
+      proficiency: 80,
       flag: "🇬🇧",
-    },
-    {
-      name: "Japanese",
-      level: "Basic",
-      proficiency: 40,
-      flag: "🇯🇵",
     },
   ];
 

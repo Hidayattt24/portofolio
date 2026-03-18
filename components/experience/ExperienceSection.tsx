@@ -7,45 +7,45 @@ import CompanyExperience from './CompanyExperience';
 
 const experiences = [
   {
-    company: 'Tech Innovators Inc.',
+    company: 'Universitas Syiah Kuala',
     positions: [
       {
-        title: 'Senior Full-Stack Developer',
-        duration: 'Jan 2023 - Present',
-        location: 'Remote',
+        title: 'Teaching Assistant - Software Development and Operations (DevOps)',
+        duration: 'Sep 2025 - Dec 2025',
+        location: 'Banda Aceh, Indonesia',
         description:
-          'Led the development of scalable web applications using Next.js, React, and Node.js. Implemented CI/CD pipelines and improved application performance by 40%. Mentored junior developers and conducted code reviews to maintain high code quality standards. Collaborated with cross-functional teams to deliver projects on time and within budget.',
+          'Led practical sessions on Git/GitHub, Docker, and CI/CD with GitHub Actions. Mentored student teams in adopting Agile/SCRUM methodologies and provided hands-on training for system monitoring using Grafana and Redis on Google Cloud Platform.',
       },
       {
-        title: 'Full-Stack Developer',
-        duration: 'Jun 2021 - Dec 2022',
-        location: 'Remote',
+        title: 'Teaching Assistant - Software Architecture',
+        duration: 'Sep 2025 - Dec 2025',
+        location: 'Banda Aceh, Indonesia',
         description:
-          'Developed and maintained multiple client-facing applications using React and Express.js. Integrated third-party APIs and payment gateways. Optimized database queries resulting in 30% faster load times.',
-      },
-    ],
-  },
-  {
-    company: 'Digital Solutions Ltd.',
-    positions: [
-      {
-        title: 'Full-Stack Developer',
-        duration: 'Jan 2020 - May 2021',
-        location: 'Hybrid',
-        description:
-          'Built and deployed responsive web applications. Worked closely with design team to implement pixel-perfect UI components. Participated in agile development processes and daily stand-ups.',
+          'Guided students in system modeling using UML/OCL and the implementation of Creational, Structural, and Behavioral design patterns. Evaluated architectural models and Requirements Engineering (RFA) documentation for major course projects.',
       },
     ],
   },
   {
-    company: 'StartUp Ventures',
+    company: 'Dinas Komunikasi, Informatika dan Persandian Aceh',
     positions: [
       {
-        title: 'Junior Web Developer',
-        duration: 'Jun 2019 - Dec 2019',
-        location: 'On-site',
+        title: 'AI Engineer Intern (Research & Development)',
+        duration: 'Aug 2025 - Sep 2025',
+        location: 'Banda Aceh, Indonesia',
         description:
-          'Built responsive websites using HTML, CSS, JavaScript, and React. Collaborated with designers to implement pixel-perfect UI components. Fixed bugs and implemented new features based on user feedback.',
+          'Engineered "LawChain," an AI prototype using Retrieval-Augmented Generation (RAG) for legal inquiries. Developed a scalable Backend API using FastAPI and optimized Large Language Models, including Google Gemma 2:2b and LLaMA 3, to improve diagnostic accuracy.',
+      },
+    ],
+  },
+  {
+    company: 'Coding Camp powered by DBS Foundation',
+    positions: [
+      {
+        title: 'Front-End and Back-End Developer Cohort',
+        duration: 'Feb 2025 - Jul 2025',
+        location: 'Remote',
+        description:
+          'Selected for an intensive full-stack program. Engineered "PurrPal," a health innovation platform recognized as a Top 20 Best Capstone Project (Top 5% of 398 submissions). Built seamless interfaces with Next.js and robust RESTful APIs with Express.js.',
       },
     ],
   },

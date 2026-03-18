@@ -8,7 +8,7 @@ import AchievementModal from './AchievementModal';
 
 interface Achievement {
   title: string;
-  category: 'hackathon' | 'competition' | 'certification' | 'award';
+  category: 'competition';
   date: string;
   description: string;
   detailedDescription: string;
@@ -19,127 +19,88 @@ interface Achievement {
   link?: string;
 }
 
+const COMPETITION_COLOR = '#4A90E2';
+
 const achievements: Achievement[] = [
   {
-    title: 'First Place - National Hackathon 2023',
-    category: 'hackathon',
-    date: 'November 2023',
-    description: 'Won first place among 150+ teams by developing an AI-powered healthcare solution that helps diagnose medical conditions using machine learning and computer vision.',
-    detailedDescription: 'Developed a comprehensive AI-powered healthcare platform that leverages machine learning and computer vision to assist medical professionals in diagnosing various conditions. The solution includes features for image analysis, patient data management, and real-time collaboration between healthcare providers.',
-    achievements: [
-      'Led a team of 5 developers in a 48-hour intensive hackathon',
-      'Implemented advanced computer vision algorithms using TensorFlow',
-      'Achieved 94% accuracy in preliminary medical image classification',
-      'Pitched solution to panel of industry experts and investors',
-    ],
-    images: ['/achievements/hackathon-2023.jpg', '/achievements/hackathon-2023-team.jpg', '/achievements/hackathon-2023-demo.jpg'],
-    award: '1st Place',
-    organizer: 'Tech Innovation Summit',
-    link: 'https://example.com/certificate',
-  },
-  {
-    title: 'Best UI/UX Design - Web Development Competition',
+    title: 'Top 20 Best Capstone Project - DBS Foundation Coding Camp',
     category: 'competition',
-    date: 'August 2023',
-    description: 'Awarded for exceptional user interface and user experience design in a web application competition. Created an intuitive and accessible design system.',
-    detailedDescription: 'Designed and developed a complete design system from scratch, focusing on accessibility, usability, and modern aesthetics. The project included comprehensive component libraries, style guides, and documentation that received praise from judges for its attention to detail and user-centric approach.',
+    date: 'August 2025',
+    description: 'Recognized as one of the top 20 best projects out of 600+ teams nationwide by developing PurrPal, an innovative AI-driven healthcare platform for cats.',
+    detailedDescription: 'Developed PurrPal, a comprehensive cat healthcare solution that utilizes a Dual AI Architecture. The system integrates Computer Vision for skin disease detection and Tabular Analytics for systemic disease prediction, providing pet owners with 24/7 initial diagnostic insights.',
     achievements: [
-      'Created a fully accessible design system compliant with WCAG 2.1 AA standards',
-      'Designed 50+ reusable UI components with dark mode support',
-      'Conducted user testing with 25+ participants',
-      'Achieved 98% satisfaction rate in usability testing',
+      'Successfully competed against 600+ participants to secure a position in the Top 20 Best Capstone Projects',
+      'Developed a high-accuracy Dual AI system using TensorFlow and Google Vertex AI for feline health diagnostics',
+      'Built a scalable full-stack application using Next.js 15 and Google Cloud Run for optimal performance',
+      'Received professional validation for both technical implementation and real-world health-tech impact',
     ],
-    images: ['/achievements/web-comp-2023.jpg', '/achievements/web-comp-2023-design.jpg'],
-    award: 'Best Design',
-    organizer: 'Digital Creators Festival',
+    images: ['/achievements/purrpal-1.png', '/achievements/purrpal-2.png'],
+    award: 'Top 20 Best Capstone',
+    organizer: 'DBS Foundation x Dicoding Indonesia',
+    link: 'https://drive.google.com/file/d/1bD4ULI0hVl6mpDN45_OZieQiCSMG7FLF/view?usp=sharing',
   },
   {
-    title: 'Google Cloud Professional Certificate',
-    category: 'certification',
-    date: 'June 2023',
-    description: 'Completed comprehensive Google Cloud Platform certification program, demonstrating proficiency in cloud architecture, deployment, and management.',
-    detailedDescription: 'Successfully completed the rigorous Google Cloud Professional certification program, covering advanced topics in cloud architecture, infrastructure design, security implementation, and cost optimization. The certification validates expertise in designing, developing, and managing robust, secure, scalable applications on Google Cloud Platform.',
-    achievements: [
-      'Mastered GCP core services including Compute Engine, Cloud Storage, and BigQuery',
-      'Learned to design highly available and fault-tolerant cloud architectures',
-      'Gained expertise in cloud security and compliance best practices',
-      'Completed hands-on labs and real-world case study projects',
-    ],
-    images: ['/achievements/gcp-cert.jpg'],
-    award: 'Certified',
-    organizer: 'Google Cloud',
-    link: 'https://cloud.google.com/certification',
-  },
-  {
-    title: 'Outstanding Contribution Award',
-    category: 'award',
-    date: 'March 2023',
-    description: 'Recognized for outstanding contribution to the university programming community through mentorship, workshop organization, and open-source contributions.',
-    detailedDescription: 'Honored with the Outstanding Contribution Award for exceptional dedication to fostering the university programming community. This recognition acknowledges contributions in mentoring junior students, organizing technical workshops, and maintaining open-source projects that benefited hundreds of students.',
-    achievements: [
-      'Mentored 50+ students in web development and programming fundamentals',
-      'Organized 12 technical workshops with 500+ total attendees',
-      'Contributed to 15+ open-source projects benefiting the student community',
-      'Established coding bootcamp program for first-year students',
-    ],
-    images: ['/achievements/contribution-2023.jpg'],
-    award: 'Outstanding',
-    organizer: 'University Tech Club',
-  },
-  {
-    title: 'Second Place - Mobile App Challenge',
+    title: '2nd Winner - Web Programming Competition (INFINITERA 1.0)',
     category: 'competition',
-    date: 'December 2022',
-    description: 'Developed a cross-platform mobile application using React Native that addresses environmental sustainability through gamification.',
-    detailedDescription: 'Created an innovative mobile application that encourages sustainable living practices through gamification and social features. The app tracks users\' eco-friendly activities, provides educational content about environmental issues, and builds a community of environmentally conscious individuals.',
+    date: 'July 2025',
+    description: 'Secured second place in a national-level Web Programming competition by developing Velora, an AI-powered pregnancy companion platform.',
+    detailedDescription: 'Velora is a comprehensive digital replacement for the maternal and child health book (Buku KIA). It features AI-based health risk diagnosis, interactive pregnancy timelines, and automated gallery backups. As the Front-End & Fullstack Developer, I built the entire user interface, interactive workflows, and system logic integrations.',
     achievements: [
-      'Developed cross-platform app serving iOS and Android users',
-      'Implemented gamification system with achievements and leaderboards',
-      'Integrated real-time data tracking for carbon footprint calculation',
-      'Acquired 1,000+ beta testers during the competition period',
+      'Awarded 2nd Winner among national participants in the Web Programming category',
+      'Engineered an AI-powered diagnostic tool to detect early pregnancy health risks with high accuracy',
+      'Developed a seamless user experience including an interactive timeline and cloud-based pregnancy gallery',
+      'Integrated complex system logic with a modern, accessible interface tailored for Indonesian expectant mothers',
     ],
-    images: ['/achievements/mobile-app-2022.jpg', '/achievements/mobile-app-2022-screens.jpg'],
-    award: '2nd Place',
-    organizer: 'Startup Weekend',
+    images: ['/achievements/dara-1.png', '/achievements/dara-2.png'],
+    award: '2nd Winner',
+    organizer: 'Himpunan Mahasiswa Teknik Informatika Universitas Islam Sultan Agung',
+    link: 'https://drive.google.com/file/d/1bD4ULI0hVl6mpDN45_OZieQiCSMG7FLF/view?usp=sharing',
   },
   {
-    title: 'AWS Solutions Architect Associate',
-    category: 'certification',
-    date: 'October 2022',
-    description: 'Achieved AWS Solutions Architect Associate certification, demonstrating expertise in designing distributed systems and applications on Amazon Web Services.',
-    detailedDescription: 'Earned the AWS Solutions Architect Associate certification, validating comprehensive understanding of AWS services and best practices for architecting scalable, highly available, and fault-tolerant systems on the AWS platform. The certification demonstrates proficiency in selecting appropriate AWS services for specific use cases.',
+    title: 'Finalist - INFEST XI Hackathon',
+    category: 'competition',
+    date: 'October 2025',
+    description: 'Selected as a national finalist in the INFEST XI Hackathon by developing GajiBersih, an AI-powered legal and financial transparency platform, during an intensive 42-hour nonstop hackathon.',
+    detailedDescription: 'GajiBersih is an innovative platform developed within a 42-hour nonstop coding marathon to help employees understand complex labor contracts. The system integrates OpenAI API for automated contract scanning and risk identification, coupled with a precise payroll engine that complies with Indonesian labor regulations regarding BPJS and PPh21 tax.',
     achievements: [
-      'Mastered AWS core services: EC2, S3, RDS, Lambda, and more',
-      'Learned to design cost-optimized and performance-efficient architectures',
-      'Gained expertise in AWS security, identity, and compliance services',
-      'Completed practical scenarios and hands-on labs',
+      'Successfully reached the Finalist stage in the INFEST XI National Hackathon after a 42-hour nonstop development sprint',
+      'Integrated OpenAI API to automatically scan PDF/DOCX contracts and identify critical clauses or legal risks',
+      'Developed a transparent payroll calculation engine covering BPJS and PPh21 tax components',
+      'Implemented a context-aware "Ask AI" feature for interactive legal consultation based on specific user documents',
     ],
-    images: ['/achievements/aws-cert.jpg'],
-    award: 'Certified',
-    organizer: 'Amazon Web Services',
-    link: 'https://aws.amazon.com/certification',
+    images: ['/achievements/gaji-bersih-1.png', '/achievements/gaji-bersih-2.png', '/achievements/gaji-bersih-3.png', '/achievements/gaji-bersih-4.png'],
+    award: 'Top 10 Finalist',
+    organizer: 'INFEST XI (Informatics Festival)',
+    link: 'https://drive.google.com/file/d/1ORmfDxgUdYa7JENEGfriqjajWbKvybxe/view?usp=sharing',
+  },
+  {
+    title: 'National Finalist - LIDM 2025 (ITDP Division)',
+    category: 'competition',
+    date: 'December 2025',
+    description: 'Secured a position as a National Top 20 Finalist in the Digital Education Technology Innovation (ITDP) division at LIDM 2025, emerging from a competitive pool of over 400+ registered teams across Indonesia.',
+    detailedDescription: 'LIDM (Lomba Inovasi Digital Mahasiswa) is a prestigious national competition organized by Puspresnas-Kemendikbudristek that challenges students to create digital solutions for educational transformation. Out of 400+ nationwide entries, Adaptivin was recognized for its innovative Rule-Based Adaptive Learning System that addresses the numeracy gap in primary education through real-time difficulty scaling and AI-driven insights.',
+    achievements: [
+      'Successfully advanced to the National Finalist stage, ranking in the Top 20 out of 400+ competing teams nationwide',
+      'Developed a sophisticated Rule-Based Engine to personalize mathematics learning for primary school students',
+      'Integrated Google Gemini AI for automated misconception detection and personalized student learning reports',
+      'Demonstrated high impact through field trials at SDN 16 Banda Aceh, receiving professional validation for its pedagogical and technical stability',
+    ],
+    images: [
+      '/achievements/adaptivin-1.png',
+      '/achievements/adaptivin-2.png',
+      '/achievements/adaptivin-3.png',
+      '/achievements/adaptivin-4.png',
+      '/achievements/adaptivin-5.png',
+    ],
+    award: 'Top 20 Finalist',
+    organizer: 'Pusat Prestasi Nasional (Puspresnas) - Kemendikbudristek',
+    link: 'https://drive.google.com/file/d/1QY6HE1K-SoNaBxhxTTQt2HahImIRJote/view?usp=sharing',
   },
 ];
 
-const categories = {
-  all: { label: 'All Achievements', color: '#25343F' },
-  hackathon: { label: 'Hackathons', color: '#D4AF37' },
-  competition: { label: 'Competitions', color: '#4A90E2' },
-  certification: { label: 'Certifications', color: '#5A7863' },
-  award: { label: 'Awards', color: '#9B59B6' },
-};
-
-type CategoryType = keyof typeof categories;
-
 export default function AchievementsSection() {
-  const [selectedCategory, setSelectedCategory] = useState<CategoryType>('all');
   const [selectedAchievement, setSelectedAchievement] = useState<Achievement | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const filteredAchievements =
-    selectedCategory === 'all'
-      ? achievements
-      : achievements.filter((achievement) => achievement.category === selectedCategory);
 
   const handleViewDetails = (achievement: Achievement) => {
     setSelectedAchievement(achievement);
@@ -171,67 +132,23 @@ export default function AchievementsSection() {
         </p>
       </motion.div>
 
-      {/* Category Filter */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="mb-8"
-      >
-        <div className="flex flex-wrap gap-3">
-          {(Object.keys(categories) as CategoryType[]).map((category) => (
-            <motion.button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-[var(--radius-md)] text-sm font-medium transition-all border-2 ${
-                selectedCategory === category
-                  ? 'text-white border-[var(--card-border)] shadow-[var(--shadow-sm)]'
-                  : 'bg-white text-[var(--text-primary)] border-[var(--card-border)] hover:shadow-[var(--shadow-sm)]'
-              }`}
-              style={{
-                backgroundColor:
-                  selectedCategory === category ? categories[category].color : undefined,
-              }}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              {categories[category].label}
-            </motion.button>
-          ))}
-        </div>
-      </motion.div>
-
       {/* Achievements List - Single Column */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
         className="flex flex-col gap-6"
       >
-        {filteredAchievements.map((achievement, index) => (
+        {achievements.map((achievement, index) => (
           <AchievementCard
             key={index}
             {...achievement}
-            categoryColor={categories[achievement.category].color}
+            categoryColor={COMPETITION_COLOR}
             index={index}
             onViewDetails={() => handleViewDetails(achievement)}
           />
         ))}
       </motion.div>
-
-      {/* Empty State */}
-      {filteredAchievements.length === 0 && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-center py-16 bg-[var(--card-bg)] rounded-[var(--radius-xl)] border-[3px] border-[var(--card-border)]"
-        >
-          <Trophy size={64} className="mx-auto mb-4 text-[var(--card-shadow)]/30" />
-          <p className="text-lg text-[var(--text-secondary)]">
-            No achievements found in this category
-          </p>
-        </motion.div>
-      )}
 
       {/* Achievement Modal */}
       {selectedAchievement && (
@@ -239,8 +156,8 @@ export default function AchievementsSection() {
           isOpen={isModalOpen}
           onClose={handleCloseModal}
           title={selectedAchievement.title}
-          category={selectedCategory === 'all' ? selectedAchievement.category : selectedCategory}
-          categoryColor={categories[selectedAchievement.category].color}
+          category={selectedAchievement.category}
+          categoryColor={COMPETITION_COLOR}
           date={selectedAchievement.date}
           description={selectedAchievement.description}
           detailedDescription={selectedAchievement.detailedDescription}

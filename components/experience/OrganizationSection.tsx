@@ -2,45 +2,28 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, ChevronUp, Users, Calendar, Award } from 'lucide-react';
+import { ChevronDown, ChevronUp, Users } from 'lucide-react';
+import CompanyExperience from './CompanyExperience';
 
-interface OrgExperience {
-  organization: string;
-  position: string;
-  period: string;
-  achievements: string[];
-}
-
-const organizationData: OrgExperience[] = [
+const organizations = [
   {
-    organization: 'Google Developer Student Club',
-    position: 'Lead Organizer',
-    period: 'Aug 2021 - Jun 2022',
-    achievements: [
-      'Organized 15+ tech workshops and coding bootcamps',
-      'Led a team of 20+ members in community outreach programs',
-      'Increased club membership by 150% through effective marketing',
-      'Collaborated with industry partners for mentorship programs',
-    ],
-  },
-  {
-    organization: 'Campus Programming Community',
-    position: 'Vice President',
-    period: 'Jan 2020 - Jul 2021',
-    achievements: [
-      'Mentored 50+ junior developers in web development',
-      'Coordinated annual hackathon with 200+ participants',
-      'Developed curriculum for beginner programming courses',
-    ],
-  },
-  {
-    organization: 'Tech Volunteer Initiative',
-    position: 'Active Member',
-    period: 'Sep 2019 - Dec 2021',
-    achievements: [
-      'Taught basic computer skills to underprivileged communities',
-      'Contributed to open-source educational projects',
-      'Assisted in organizing charity tech events',
+    company: 'Himpunan Mahasiswa Informatika (HMIF) USK',
+    icon: <Users size={24} className="text-white" />,
+    positions: [
+      {
+        title: 'Head of Student Welfare Management Department',
+        duration: 'Feb 2025 - Present',
+        location: 'Banda Aceh, Indonesia',
+        description:
+          'Leading a dynamic team of 14 staff members across two strategic divisions: Student Aspirations and Women Empowerment. Directing the "Kabinet Beyond" welfare initiatives to bridge communication gaps between students and faculty administration. Managing end-to-end execution of departmental programs and cultivating an empowering work environment focused on maximizing team growth and professional development opportunities.',
+      },
+      {
+        title: 'Staff of Student Welfare Management Department',
+        duration: 'Feb 2024 - Feb 2025',
+        location: 'Banda Aceh, Indonesia',
+        description:
+          'Actively organized and implemented various departmental programs focused on student well-being and campus life enhancement. Supported the execution of all determined organizational programs with a high level of participation and accountability. Contributed to creating and maintaining a harmonious and productive work environment for the department staff.',
+      },
     ],
   },
 ];
@@ -90,53 +73,18 @@ export default function OrganizationSection() {
               transition={{ duration: 0.3 }}
               className="flex flex-col gap-6 overflow-hidden"
             >
-              {organizationData.map((org, index) => (
+              {organizations.map((org, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="bg-[var(--card-bg)] rounded-[var(--radius-xl)] p-6 md:p-8 border-[3px] border-[var(--card-border)] shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)] transition-all duration-300"
                 >
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 bg-[var(--button-primary-bg)] rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Users className="w-6 h-6 text-white" />
-                    </div>
-                    
-                    <div className="flex-1">
-                      <h3 className="text-xl md:text-2xl font-medium text-[var(--text-primary)] mb-1">
-                        {org.position}
-                      </h3>
-                      <p className="text-lg text-[var(--accent-green)] font-medium mb-3">
-                        {org.organization}
-                      </p>
-                      
-                      <div className="flex items-center gap-1 text-sm text-[var(--text-secondary)]">
-                        <Calendar className="w-4 h-4" />
-                        <span>{org.period}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="ml-16 mt-4">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Award className="w-4 h-4 text-[var(--accent-green)]" />
-                      <span className="text-sm font-medium text-[var(--text-primary)]">
-                        Key Contributions
-                      </span>
-                    </div>
-                    <ul className="space-y-2">
-                      {org.achievements.map((achievement, achIndex) => (
-                        <li
-                          key={achIndex}
-                          className="text-base text-[var(--text-secondary)] leading-relaxed flex items-start gap-2"
-                        >
-                          <span className="text-[var(--accent-green)] mt-1.5">•</span>
-                          <span className="flex-1">{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <CompanyExperience
+                    company={org.company}
+                    positions={org.positions}
+                    customIcon={org.icon}
+                  />
                 </motion.div>
               ))}
             </motion.div>

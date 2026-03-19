@@ -46,11 +46,14 @@ export default function ProjectModal({
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      document.body.setAttribute("data-modal-open", "true");
     } else {
       document.body.style.overflow = "";
+      document.body.removeAttribute("data-modal-open");
     }
     return () => {
       document.body.style.overflow = "";
+      document.body.removeAttribute("data-modal-open");
     };
   }, [isOpen]);
 
@@ -84,12 +87,12 @@ export default function ProjectModal({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", duration: 0.5 }}
-              className="bg-white rounded-none lg:rounded-[var(--radius-xl)] shadow-2xl border-0 lg:border-[3px] border-[var(--card-border)] w-full lg:max-w-6xl h-full lg:h-auto lg:max-h-[90vh] overflow-y-auto lg:overflow-hidden modal-scrollbar"
+              className="bg-[var(--card-bg)] rounded-none lg:rounded-[var(--radius-xl)] shadow-2xl border-0 lg:border-[3px] border-[var(--card-border)] w-full lg:max-w-6xl h-full lg:h-auto lg:max-h-[90vh] overflow-y-auto lg:overflow-hidden modal-scrollbar"
             >
               {/* Close Button */}
               <button
                 onClick={onClose}
-                className="fixed lg:absolute top-3 right-3 z-20 p-2 bg-white/90 rounded-[var(--radius-md)] hover:bg-white transition-colors border-2 border-[var(--card-border)]"
+                className="fixed lg:absolute top-3 right-3 z-20 p-2 bg-[var(--card-bg)]/90 rounded-[var(--radius-md)] hover:bg-[var(--card-bg)] transition-colors border-2 border-[var(--card-border)]"
                 aria-label="Close"
               >
                 <X size={20} className="text-[var(--text-primary)]" />
@@ -99,7 +102,7 @@ export default function ProjectModal({
               <div className="flex flex-col lg:flex-row lg:h-full lg:max-h-[90vh]">
 
                 {/* ── Image Slider Panel ── */}
-                <div className="lg:w-1/2 bg-[var(--card-bg)] relative flex items-center justify-center h-[220px] sm:h-[280px] lg:h-auto lg:min-h-[600px] flex-shrink-0">
+                <div className="lg:w-1/2 bg-[var(--card-bg)] relative flex items-center justify-center min-h-[260px] sm:min-h-[320px] lg:h-auto lg:min-h-[600px] flex-shrink-0 border-b-[2px] lg:border-b-0 lg:border-r-[3px] border-[var(--card-border)]">
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentImageIndex}
@@ -128,14 +131,14 @@ export default function ProjectModal({
                     <>
                       <button
                         onClick={prevImage}
-                        className="absolute left-2 lg:left-4 top-1/2 -translate-y-1/2 p-1.5 lg:p-2 bg-white/90 rounded-[var(--radius-md)] hover:bg-white transition-colors border-2 border-[var(--card-border)]"
+                        className="absolute left-2 lg:left-4 top-1/2 -translate-y-1/2 p-1.5 lg:p-2 bg-[var(--card-bg)]/90 rounded-[var(--radius-md)] hover:bg-[var(--card-bg)] transition-colors border-2 border-[var(--card-border)]"
                         aria-label="Previous image"
                       >
                         <ChevronLeft size={18} className="text-[var(--text-primary)]" />
                       </button>
                       <button
                         onClick={nextImage}
-                        className="absolute right-2 lg:right-4 top-1/2 -translate-y-1/2 p-1.5 lg:p-2 bg-white/90 rounded-[var(--radius-md)] hover:bg-white transition-colors border-2 border-[var(--card-border)]"
+                        className="absolute right-2 lg:right-4 top-1/2 -translate-y-1/2 p-1.5 lg:p-2 bg-[var(--card-bg)]/90 rounded-[var(--radius-md)] hover:bg-[var(--card-bg)] transition-colors border-2 border-[var(--card-border)]"
                         aria-label="Next image"
                       >
                         <ChevronRight size={18} className="text-[var(--text-primary)]" />

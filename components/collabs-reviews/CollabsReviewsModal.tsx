@@ -75,6 +75,7 @@ export default function CollabsReviewsModal({
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      document.body.setAttribute('data-modal-open', 'true');
       setCurrentImageIndex(0);
       // Default to first available tab
       if (projectImages.length > 0) setActiveTab('photos');
@@ -82,8 +83,12 @@ export default function CollabsReviewsModal({
       else if (newsLinks.length > 0) setActiveTab('news');
     } else {
       document.body.style.overflow = 'unset';
+      document.body.removeAttribute('data-modal-open');
     }
-    return () => { document.body.style.overflow = 'unset'; };
+    return () => {
+      document.body.style.overflow = 'unset';
+      document.body.removeAttribute('data-modal-open');
+    };
   }, [isOpen]);
 
   if (!isOpen) return null;

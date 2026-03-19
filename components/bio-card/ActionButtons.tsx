@@ -12,10 +12,22 @@ export default function ActionButtons() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.7, duration: 0.6 }}
     >
-      <Button variant="primary" icon={Phone}>
+      <Button
+        variant="primary"
+        icon={Phone}
+        href="https://www.linkedin.com/in/hidayat-nur-hakim/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Collaboration
       </Button>
-      <Button variant="secondary" icon={Download}>
+      <Button
+        variant="secondary"
+        icon={Download}
+        href="/home/Hidayat Nur Hakim-resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Resume
       </Button>
     </motion.div>

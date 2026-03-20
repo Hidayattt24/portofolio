@@ -41,7 +41,7 @@ export const projects: Project[] = [
     thumbnail: '/projects/PurrPal-1.png',
     demoUrl: 'https://fe-purrpal.vercel.app/',
     githubRepos: [
-      { label: 'Fullstack', url: 'https://github.com/Hidayattt24/PURRPAL.git' },
+      { label: 'Fullstack', url: 'https://github.com/Hidayattt24/PURRPAL' },
     ],
     featured: true,
     startDate: '2025-02',
@@ -68,8 +68,8 @@ export const projects: Project[] = [
     thumbnail: '/projects/Velora-1.png',
     demoUrl: 'https://velora-lake.vercel.app/',
     githubRepos: [
-      { label: 'Frontend', url: 'https://github.com/Hidayattt24/FE-Velora.git' },
-      { label: 'Backend', url: 'https://github.com/Hidayattt24/FE-Velora.git' },
+      { label: 'Frontend', url: 'https://github.com/Hidayattt24/FE-Velora' },
+      { label: 'Backend', url: 'https://github.com/Hidayattt24/BE-Velora' },
     ],
     featured: true,
     startDate: '2025-02',
@@ -95,8 +95,7 @@ export const projects: Project[] = [
     ],
     thumbnail: '/projects/Taubatku.png',
     githubRepos: [
-      { label: 'Frontend', url: 'https://github.com/Hidayattt24/Taubatku.git' },
-      { label: 'Backend', url: 'https://github.com/Hidayattt24/Taubatku.git' },
+      { label: 'Frontend', url: 'https://github.com/Hidayattt24/Taubatku' }
     ],
     featured: true,
     startDate: '2025-02',
@@ -122,8 +121,8 @@ export const projects: Project[] = [
     ],
     thumbnail: '/projects/Lawchain.png',
     githubRepos: [
-      { label: 'Frontend', url: 'https://github.com/Hidayattt24/fe-lawchain.git' },
-      { label: 'Backend', url: 'https://github.com/Hidayattt24/be-lawchain.git' },
+      { label: 'Frontend', url: 'https://github.com/Hidayattt24/fe-lawchain' },
+      { label: 'Backend', url: 'https://github.com/Hidayattt24/be-lawchain' },
     ],
     featured: true,
     startDate: '2025-02',
@@ -149,7 +148,7 @@ export const projects: Project[] = [
     ],
     thumbnail: '/projects/GajiBersih.png',
     githubRepos: [
-      { label: 'Source Code', url: 'https://github.com/athazayyan/gaji-bersih.git' },
+      { label: 'Source Code', url: 'https://github.com/athazayyan/gaji-bersih' },
     ],
     featured: true,
     startDate: '2025-02',
@@ -183,9 +182,9 @@ export const projects: Project[] = [
     thumbnail: '/projects/Adaptivin-1.png',
     demoUrl: 'https://adaptivin-user.vercel.app/',
     githubRepos: [
-      { label: 'FE - User', url: 'https://github.com/Hidayattt24/adaptivin-user.gitt' },
-      { label: 'FE - Admin', url: 'https://github.com/Hidayattt24/adaptivin-admin.git' },
-      { label: 'Be', url: 'https://github.com/farhanulkhair/be-adaptivin.git' },
+      { label: 'FE - User', url: 'https://github.com/Hidayattt24/adaptivin-user' },
+      { label: 'FE - Admin', url: 'https://github.com/Hidayattt24/adaptivin-admin' },
+      { label: 'Be', url: 'https://github.com/farhanulkhair/be-adaptivin' },
     ],
     featured: true,
     startDate: '2025-02',
@@ -212,9 +211,9 @@ export const projects: Project[] = [
     thumbnail: '/projects/Bukadita.png',
     demoUrl: 'https://www.bukadita.id/',
     githubRepos: [
-      { label: 'FE-User', url: 'https://github.com/Hidayattt24/bukadita-user-v2.git' },
-      { label: 'FE-Admin', url: 'https://github.com/Hidayattt24/bukadita-admin-v2.git' },
-      { label: 'Backend', url: 'https://github.com/Hidayattt24/bukadita-api-v2.git' },
+      { label: 'FE-User', url: 'https://github.com/Hidayattt24/bukadita-user-v2' },
+      { label: 'FE-Admin', url: 'https://github.com/Hidayattt24/bukadita-admin-v2' },
+      { label: 'Backend', url: 'https://github.com/Hidayattt24/bukadita-api-v2' },
     ],
     featured: true,
     startDate: '2025-02',

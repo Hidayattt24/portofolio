@@ -14,7 +14,16 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   title: "Hidayat Nur Hakim - Portfolio",
   description: "Full-Stack Developer | AI & LLM Enthusiast",
+  icons: {
+    icon: [
+      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon.png', sizes: '16x16', type: 'image/png' },
+    ],
+    shortcut: [{ url: '/icon.png' }],
+    apple: [{ url: '/icon.png', sizes: '180x180', type: 'image/png' }],
+  },
 };
+
 
 export default async function RootLayout({
   children,

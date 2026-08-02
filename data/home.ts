@@ -17,36 +17,37 @@ export interface SocialLink {
 }
 
 export const bioData: BioData = {
-  name: 'Hidayat Nur Hakim',
-  subtitle: 'Full-Stack Developer | AI & LLM Enthusiast',
-  status: 'Available for new projects',
-  tagline1: 'Building scalable solutions',
-  tagline2: 'with modern technologies',
-  description: 'Passionate about creating innovative web applications and exploring the potential of AI. Specialized in React, Next.js, and cloud technologies.',
-  avatar: '/home/avatar.jpg',
-  resumeUrl: '/home/resume.pdf',
-  contactEmail: 'hello@example.com',
+  name: "Hidayat Nur Hakim",
+  subtitle: "Full-Stack Developer | AI & LLM Enthusiast",
+  status: "Available for new projects",
+  tagline1: "Building scalable solutions",
+  tagline2: "with modern technologies",
+  description:
+    "Passionate about creating innovative web applications and exploring the potential of AI. Specialized in React, Next.js, and cloud technologies.",
+  avatar: "/home/avatar.jpg",
+  resumeUrl: "/home/resume.pdf",
+  contactEmail: "hello@example.com",
 };
 
 export const socialLinks: SocialLink[] = [
   {
-    name: 'LinkedIn',
-    url: 'www.linkedin.com/in/hidayat-nur-hakim',
-    icon: 'linkedin',
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/hidayat-nur-hakim",
+    icon: "linkedin",
   },
   {
-    name: 'GitHub',
-    url: 'https://github.com/Hidayattt24',
-    icon: 'github',
+    name: "GitHub",
+    url: "https://github.com/Hidayattt24",
+    icon: "github",
   },
   {
-    name: 'X (Twitter)',
-    url: 'https://x.com/your-username',
-    icon: 'x',
+    name: "X (Twitter)",
+    url: "https://x.com/your-username",
+    icon: "x",
   },
   {
-    name: 'Instagram',
-    url: 'https://instagram.com/your-username',
-    icon: 'instagram',
+    name: "Instagram",
+    url: "https://instagram.com/your-username",
+    icon: "instagram",
   },
 ];

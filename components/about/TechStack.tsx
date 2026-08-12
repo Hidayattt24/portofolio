@@ -8,6 +8,7 @@ import {
   Brain,
   Cloud,
   Layout,
+  Smartphone,
 } from "lucide-react";
 
 interface TechCategory {
@@ -26,6 +27,7 @@ const techCategories: TechCategory[] = [
       technologies: [
         "React / Next.js 15",
         "TypeScript",
+        "JavaScript",
         "Tailwind CSS",
         "Framer Motion",
       ],
@@ -34,7 +36,13 @@ const techCategories: TechCategory[] = [
       category: "Backend",
       icon: Server,
       color: "#213448",
-      technologies: ["Node.js / Express.js", "Python", "FastAPI", "RESTful APIs"],
+      technologies: [
+        "Go / Fiber",
+        "Node.js / Express.js",
+        "Python",
+        "FastAPI",
+        "RESTful APIs",
+      ],
     },
     {
       category: "AI & Machine Learning",
@@ -42,7 +50,11 @@ const techCategories: TechCategory[] = [
       color: "#5A7863",
       technologies: [
         "RAG (Retrieval-Augmented Generation)",
+        "LLM Integration",
         "Google Gemma / LLaMA",
+        "Gemini AI",
+        "OpenAI API",
+        "Ollama",
         "LangChain",
         "TensorFlow / Scikit-learn",
       ],
@@ -51,14 +63,27 @@ const techCategories: TechCategory[] = [
       category: "Database",
       icon: Database,
       color: "#213448",
-      technologies: ["PostgreSQL", "Supabase", "FAISS (Vector Store)", "Redis"],
+      technologies: [
+        "PostgreSQL",
+        "MySQL",
+        "Supabase",
+        "FAISS (Vector Store)",
+        "Redis",
+      ],
+    },
+    {
+      category: "Mobile",
+      icon: Smartphone,
+      color: "#5A7863",
+      technologies: ["Flutter", "Dart"],
     },
     {
       category: "Cloud & DevOps",
       icon: Cloud, // Ganti Smartphone menjadi Cloud jika tersedia
-      color: "#5A7863",
+      color: "#213448",
       technologies: [
         "Docker",
+        "Git / GitHub",
         "CI/CD (GitHub Actions)",
         "Google Cloud Platform (GCP)",
         "Monitoring (Grafana)",
@@ -67,8 +92,16 @@ const techCategories: TechCategory[] = [
     {
       category: "System Design",
       icon: Layout, // Ganti Palette menjadi Layout/Pencil
-      color: "#213448",
-      technologies: ["Software Architecture", "Design Patterns", "UML / OCL", "Figma"],
+      color: "#5A7863",
+      technologies: [
+        "Software Architecture",
+        "Design Patterns",
+        "API Integration",
+        "Authentication & RBAC",
+        "System Design",
+        "UML / OCL",
+        "Figma",
+      ],
     },
   ];
   return (

@@ -2,13 +2,15 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, ChevronUp, Briefcase } from 'lucide-react';
+import { ChevronDown, ChevronUp, Briefcase, Tag } from 'lucide-react';
 
 interface Position {
   title: string;
   duration: string;
   location: string;
   description: string;
+  technologies?: string[];
+  technologiesLabel?: string;
 }
 
 interface CompanyExperienceProps {
@@ -124,6 +126,28 @@ export default function CompanyExperience({ company, positions, logo, customIcon
                           </>
                         )}
                       </motion.button>
+                    )}
+
+                    {/* Technologies */}
+                    {position.technologies && position.technologies.length > 0 && (
+                      <div className="mt-4 pt-4 border-t border-dashed border-[var(--text-muted)]">
+                        <div className="flex items-center gap-1.5 mb-2.5">
+                          <Tag size={13} className="text-[var(--accent-green)]" />
+                          <span className="text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)]">
+                            {position.technologiesLabel ?? 'Technologies'}
+                          </span>
+                        </div>
+                        <div className="flex flex-wrap gap-1.5">
+                          {position.technologies.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-2.5 py-1 bg-white text-[var(--text-primary)] text-xs font-medium rounded-md border border-[var(--card-border)] hover:bg-[var(--accent-green)] hover:text-white transition-colors duration-200 cursor-default"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
                     )}
                   </div>
                 </div>

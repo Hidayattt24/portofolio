@@ -12,10 +12,17 @@ const organizations = [
     positions: [
       {
         title: 'Head of Student Welfare Management Department',
-        duration: 'Feb 2025 - Present',
+        duration: 'Feb 2025 - Mar 2025',
         location: 'Banda Aceh, Indonesia',
         description:
-          'Leading a dynamic team of 14 staff members across two strategic divisions: Student Aspirations and Women Empowerment. Directing the "Kabinet Beyond" welfare initiatives to bridge communication gaps between students and faculty administration. Managing end-to-end execution of departmental programs and cultivating an empowering work environment focused on maximizing team growth and professional development opportunities.',
+          'Led a dynamic team of 14 staff members across two strategic divisions: Student Aspirations and Women Empowerment. Directed the "Kabinet Beyond" welfare initiatives to bridge communication gaps between students and faculty administration. Managed end-to-end execution of departmental programs and cultivated an empowering work environment focused on maximizing team growth and professional development opportunities.',
+        technologies: [
+          'Leadership',
+          'Team Management',
+          'Project Management',
+          'Cross-Functional Collaboration',
+        ],
+        technologiesLabel: 'Skills',
       },
       {
         title: 'Staff of Student Welfare Management Department',
@@ -23,6 +30,8 @@ const organizations = [
         location: 'Banda Aceh, Indonesia',
         description:
           'Actively organized and implemented various departmental programs focused on student well-being and campus life enhancement. Supported the execution of all determined organizational programs with a high level of participation and accountability. Contributed to creating and maintaining a harmonious and productive work environment for the department staff.',
+        technologies: ['Team Collaboration', 'Program Execution', 'Communication'],
+        technologiesLabel: 'Skills',
       },
     ],
   },

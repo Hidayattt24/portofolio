@@ -26,15 +26,19 @@ export default function AboutMe() {
         className="space-y-4"
       >
       <p className="text-base md:text-lg text-[var(--text-secondary)] leading-relaxed">
-        I am a final-year Informatics student at <strong>Universitas Syiah Kuala</strong> dedicated to building high-performance digital solutions. As a <strong>National Finalist at LIDM 2025</strong>, I played a key role in developing <strong>Adaptivin</strong>, an AI-powered learning platform, where I managed front-end development, AI integration, and deployment.
+        Hi, I'm <strong>Hidayat Nur Hakim</strong>, a Fresh Graduate in Computer Science and Full-Stack Developer from Banda Aceh, Indonesia, with <strong>2+ years of hands-on experience</strong> building AI-integrated web applications across government, healthcare, and education sectors.
       </p>
 
       <p className="text-base md:text-lg text-[var(--text-secondary)] leading-relaxed">
-        My expertise includes engineering <strong>RAG-based AI prototypes (LawChain)</strong> during my internship at Diskominsa Aceh and co-developing <strong>PurrPal</strong>, which ranked in the <strong>Top 5% (Top 20)</strong> of capstone projects at the DBS Foundation. I specialize in <strong>Next.js</strong> and <strong>Express.js</strong> to build production-ready applications that leverage artificial intelligence.
+        My work includes <strong>LawChain</strong>, a RAG-based legal AI system built during my internship at the Aceh provincial government, using FastAPI, LangChain, and local LLMs. Through the <strong>DBS Foundation Coding Camp</strong>, I helped build <strong>PurrPal</strong>, an AI-powered pet healthcare platform that ranked in the <strong>Top 20 of 398 national teams</strong>. I also developed <strong>ADAPTIVIN</strong>, an adaptive learning platform that became a <strong>National Finalist at LIDM 2025</strong>, and led the development of <strong>BUKADITA</strong>, a digital Posyandu platform serving <strong>50+ local cadres</strong>.
       </p>
 
       <p className="text-base md:text-lg text-[var(--text-secondary)] leading-relaxed">
-        As a <strong>Teaching Assistant for Software Architecture and DevOps</strong>, I advocate for maintainable and scalable code using GitHub for collaboration. I am now seeking opportunities to contribute my technical expertise to impactful projects that challenge the boundaries of digital innovation.
+        My technical focus is <strong>Full-Stack and AI Engineering</strong>, with experience in <strong>Go, TypeScript, Next.js, React, Node.js, Express.js, FastAPI, PostgreSQL, Docker</strong>, and <strong>LLM/RAG integrations</strong> using LangChain and Ollama. Beyond engineering, I lead <strong>14 members</strong> as Head of Student Welfare Management at HMIF USK and serve as a Teaching Assistant for <strong>Software Architecture & DevOps</strong>.
+      </p>
+
+      <p className="text-base md:text-lg text-[var(--text-secondary)] leading-relaxed">
+        I'm looking for a <strong>Full-Stack or AI Engineering role</strong> where I can turn real-world problems into reliable, scalable software and continue growing as a Software Engineer.
       </p>
       </motion.div>
     </motion.section>

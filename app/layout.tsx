@@ -39,7 +39,7 @@ export default async function RootLayout({
           <div className="min-h-screen bg-white flex items-start justify-center p-4 md:p-8 pt-8">
             <div className="w-full max-w-7xl flex gap-8">
               <Navbar />
-              <main className="flex-1 pb-24 md:pb-8">{children}</main>
+              <main className="flex-1 min-w-0 pb-24 md:pb-8">{children}</main>
             </div>
           </div>
           <BottomNav />

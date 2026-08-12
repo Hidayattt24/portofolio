@@ -7,6 +7,29 @@ import CompanyExperience from './CompanyExperience';
 
 const experiences = [
   {
+    company: 'Digital Health Research Team (USK)',
+    positions: [
+      {
+        title: 'Software Engineer',
+        duration: 'Jun 2026 - Present',
+        location: 'Banda Aceh, Indonesia',
+        description:
+          'Engineered DSMES Aceh, a digital health ecosystem for diabetes education and clinic monitoring. Built multi-tier applications using Go (Fiber), Flutter, Next.js, PostgreSQL, and Docker, including patient education modules, health logging, and telemetry dashboards for staff monitoring.',
+        technologies: [
+          'Go',
+          'Fiber',
+          'Flutter',
+          'Dart',
+          'Next.js',
+          'TypeScript',
+          'PostgreSQL',
+          'Docker',
+          'Clean Architecture',
+        ],
+      },
+    ],
+  },
+  {
     company: 'Universitas Syiah Kuala',
     positions: [
       {
@@ -15,6 +38,15 @@ const experiences = [
         location: 'Banda Aceh, Indonesia',
         description:
           'Led practical sessions on Git/GitHub, Docker, and CI/CD with GitHub Actions. Mentored student teams in adopting Agile/SCRUM methodologies and provided hands-on training for system monitoring using Grafana and Redis on Google Cloud Platform.',
+        technologies: [
+          'Git / GitHub',
+          'Docker',
+          'GitHub Actions',
+          'Grafana',
+          'Redis',
+          'Google Cloud Platform',
+          'Agile / SCRUM',
+        ],
       },
       {
         title: 'Teaching Assistant - Software Architecture',
@@ -22,6 +54,15 @@ const experiences = [
         location: 'Banda Aceh, Indonesia',
         description:
           'Guided students in system modeling using UML/OCL and the implementation of Creational, Structural, and Behavioral design patterns. Evaluated architectural models and Requirements Engineering (RFA) documentation for major course projects.',
+        technologies: ['UML / OCL', 'Design Patterns', 'Requirements Engineering'],
+      },
+      {
+        title: 'Full Stack Developer',
+        duration: 'Aug 2025 - Dec 2025',
+        location: 'Banda Aceh, Indonesia',
+        description:
+          'Developed BUKADITA, a PWA platform that digitizes Posyandu health records for 50+ local cadres. Built the frontend, RESTful APIs, PostgreSQL database, and multi-tier Role-Based Access Control (RBAC) for cadres, administrators, and stakeholders.',
+        technologies: ['TypeScript', 'Next.js', 'Express.js', 'Node.js', 'PostgreSQL', 'PWA'],
       },
     ],
   },
@@ -34,6 +75,17 @@ const experiences = [
         location: 'Banda Aceh, Indonesia',
         description:
           'Engineered "LawChain," an AI prototype using Retrieval-Augmented Generation (RAG) for legal inquiries. Developed a scalable Backend API using FastAPI and optimized Large Language Models, including Google Gemma 2:2b and LLaMA 3, to improve diagnostic accuracy.',
+        technologies: [
+          'Python',
+          'FastAPI',
+          'Next.js',
+          'TypeScript',
+          'LangChain',
+          'Ollama',
+          'LLaMA 3',
+          'Gemma 2',
+          'RAG',
+        ],
       },
     ],
   },
@@ -46,6 +98,7 @@ const experiences = [
         location: 'Remote',
         description:
           'Selected for an intensive full-stack program. Engineered "PurrPal," a health innovation platform recognized as a Top 20 Best Capstone Project (Top 5% of 398 submissions). Built seamless interfaces with Next.js and robust RESTful APIs with Express.js.',
+        technologies: ['TypeScript', 'Next.js', 'Node.js', 'Express.js', 'Gemini AI', 'GCP'],
       },
     ],
   },

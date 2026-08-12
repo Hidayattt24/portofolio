@@ -25,7 +25,7 @@ const educationData: EducationItem[] = [
       'Top 20 Best Capstone Project @ DBS Foundation Coding Camp 2025',
       '2nd Winner in National Web Programming Competition (INFINITERA 1.0) 2025',
       'National Finalist at INFEST XI Hackathon 2025 (GajiBersih Project)',
-      'Head of Student Welfare Management Department @ HMIF USK (2025 - Present)',
+      'Head of Student Welfare Management Department @ HMIF USK (Feb - Mar 2025)',
       'Teaching Assistant for Software Architecture and DevOps Courses',
     ],
   }

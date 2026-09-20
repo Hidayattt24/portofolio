@@ -51,7 +51,7 @@ export default function BioCard() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              Software Engineer | Exploring AI & LLM
+              Fresh Graduate | Software Engineer | Full-Stack Developer | AI & LLM Enthusiast
             </motion.p>
 
             {/* Status Badge */}

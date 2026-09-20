@@ -7,10 +7,10 @@ import CompanyExperience from './CompanyExperience';
 
 const experiences = [
   {
-    company: 'Digital Health Research Team (USK)',
+    company: 'Universitas Syiah Kuala',
     positions: [
       {
-        title: 'Software Engineer',
+        title: 'Full Stack Developerr',
         duration: 'Jun 2026 - Present',
         location: 'Banda Aceh, Indonesia',
         description:

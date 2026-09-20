@@ -9,6 +9,7 @@ import {
   Cloud,
   Layout,
   Smartphone,
+  Bug,
 } from "lucide-react";
 
 interface TechCategory {
@@ -30,6 +31,7 @@ const techCategories: TechCategory[] = [
         "JavaScript",
         "Tailwind CSS",
         "Framer Motion",
+        "Vite",
       ],
     },
     {
@@ -42,11 +44,12 @@ const techCategories: TechCategory[] = [
         "Python",
         "FastAPI",
         "RESTful APIs",
+        "Chi Router",
       ],
     },
     {
       category: "AI & Machine Learning",
-      icon: Brain, // Ganti Code2 menjadi Brain jika tersedia di library icon kamu
+      icon: Brain,
       color: "#5A7863",
       technologies: [
         "RAG (Retrieval-Augmented Generation)",
@@ -57,6 +60,7 @@ const techCategories: TechCategory[] = [
         "Ollama",
         "LangChain",
         "TensorFlow / Scikit-learn",
+        "Streamlit",
       ],
     },
     {
@@ -69,17 +73,30 @@ const techCategories: TechCategory[] = [
         "Supabase",
         "FAISS (Vector Store)",
         "Redis",
+        "Firebase / Firestore",
       ],
     },
     {
       category: "Mobile",
       icon: Smartphone,
       color: "#5A7863",
-      technologies: ["Flutter", "Dart"],
+      technologies: ["Flutter", "Dart", "Kotlin"],
+    },
+    {
+      category: "Testing & QA",
+      icon: Bug,
+      color: "#213448",
+      technologies: [
+        "Java",
+        "Appium",
+        "TestNG",
+        "Selenium WebDriver",
+        "Maven",
+      ],
     },
     {
       category: "Cloud & DevOps",
-      icon: Cloud, // Ganti Smartphone menjadi Cloud jika tersedia
+      icon: Cloud,
       color: "#213448",
       technologies: [
         "Docker",
@@ -91,7 +108,7 @@ const techCategories: TechCategory[] = [
     },
     {
       category: "System Design",
-      icon: Layout, // Ganti Palette menjadi Layout/Pencil
+      icon: Layout,
       color: "#5A7863",
       technologies: [
         "Software Architecture",

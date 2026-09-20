@@ -11,16 +11,81 @@ const dmSerif = DM_Serif_Display({
   style: ["normal", "italic"],
 });
 
+const SITE_URL = "https://hidayatnur.site";
+const SITE_NAME = "Hidayat Nur Hakim";
+
 export const metadata: Metadata = {
-  title: "Hidayat Nur Hakim - Portfolio",
-  description: "Full-Stack Developer | AI & LLM Enthusiast",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Hidayat Nur Hakim — Full-Stack Developer & AI/LLM Enthusiast",
+    template: "%s | Hidayat Nur Hakim",
+  },
+  description:
+    "Hidayat Nur Hakim — Full-Stack Developer & AI/LLM Enthusiast. Top 20 Finalist LIDM 2025, Top 20 Capstone DBS 2025, Finalist Hackathon INFEST XI, 2nd Winner INFINITERA 1.0, Ex-AI Intern @ Diskominsa Aceh, Teaching Assistant @ Informatics USK. Specialized in React, Next.js, TypeScript, and cloud technologies.",
+  keywords: [
+    "Hidayat Nur Hakim",
+    "Hidayat Nur Hakim portfolio",
+    "Full-Stack Developer",
+    "Software Engineer",
+    "AI Engineer",
+    "LLM Enthusiast",
+    "React Developer",
+    "Next.js Developer",
+    "Web Developer Indonesia",
+    "Informatics USK",
+    "Frontend Developer",
+    "Backend Developer",
+  ],
+  authors: [{ name: "Hidayat Nur Hakim", url: SITE_URL }],
+  creator: "Hidayat Nur Hakim",
+  publisher: "Hidayat Nur Hakim",
+  applicationName: SITE_NAME,
+  category: "technology",
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: "Hidayat Nur Hakim — Full-Stack Developer & AI/LLM Enthusiast",
+    description:
+      "Full-Stack Developer & AI/LLM Enthusiast. Top 20 Finalist LIDM 2025, Ex-AI Intern @ Diskominsa Aceh, Teaching Assistant @ Informatics USK. Building scalable web applications with React, Next.js & cloud technologies.",
+    locale: "id_ID",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Hidayat Nur Hakim — Full-Stack Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hidayat Nur Hakim — Full-Stack Developer & AI/LLM Enthusiast",
+    description:
+      "Full-Stack Developer & AI/LLM Enthusiast. Building scalable web applications with React, Next.js & cloud technologies.",
+    images: ["/opengraph-image.png"],
+    creator: "@Hidayattt24",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: [
-      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
-      { url: '/icon.png', sizes: '16x16', type: 'image/png' },
+      { url: "/icon.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon.png", sizes: "16x16", type: "image/png" },
     ],
-    shortcut: [{ url: '/icon.png' }],
-    apple: [{ url: '/icon.png', sizes: '180x180', type: 'image/png' }],
+    apple: [{ url: "/icon.png", sizes: "180x180", type: "image/png" }],
   },
 };
 
